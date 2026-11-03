@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:08c541c244e47863292a0d60ff562e0e7c7d6804948a518db3be52d3b785bca6",
+  "claims": [
+    {
+      "id": "claim_cb5765aa936a492a935934eeed2751c6",
+      "statement": "The desktop code imports OpenCV, MediaPipe, NumPy, PySimpleGUI, and Matplotlib directly, but requirements.txt declares only unpinned mediapipe and cv2; NumPy, PySimpleGUI, Matplotlib, and Tk/platform setup are not directly declared, and the repository does not establish package versions or a reproducible compatibility set.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/front.py#L1-L8",
+          "version": "repo-lines-v1:sha256:68290208a2f60280175db9812b2d004cd1e1b422961d5bcae3b283bfaafb52ac:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk3NGQyYTNmNmQ1YWIyNDQwMDE3M2RiMDlhM2I5OTgyMDFhNjIyNDM2M2JkOTM4MzA5YjdkZGVkYmE3YTdlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjJhYmNlM2ZkMzRmMzZlNjg2Yzk2N2VlMTMzMzEwNDEwNmY3MjY2MjQ4NWUyYjMxYjYxMTc0ZTQzMzU2MTE1MSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L1-L4",
+          "version": "repo-lines-v1:sha256:7ff7a2cf9d862554e755582e7e4dae56ece3e220a4b83ca9c98774fe1b4f34d1:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQ1NTQ3NWQzNTM3Yjk5ZjRkMjY3OTU0ZjQxNWYxM2ExMWJiMWM2ZTNkMWQ4NDFkZTZiMDFlYzU4ZTk5NzEzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNiNmIwNDFkYjZmZDk0OGIyMDg2ZGU4MDRlYjc3YWFlNmUzOTY1ODFmNmNlZWI5OTdmNDgzNDY3YjI0YjllMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmQ5ZjFmYjFiZWNjZmJlMzE1MGVhNTFiNTkyNWMwY2IzMDA5ZDRjNjU0NDY2ZDIyZjEyOTdkZTRlYzBmYjM5YiJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/stats.py#L1-L6",
+          "version": "repo-lines-v1:sha256:1ccb88ef88e2b6930ae73050552fb73fe9831cfd20c18d4a1b80436b5adf5d28:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjA0NjhjM2NlM2JhMDI5YmY1ZTk3NTc1NDAyODAyMTQ4OTkyMDM4NzI2YmNhZDVhOTI5Y2FlNGFmNGI4YWIwZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk3NGQyYTNmNmQ1YWIyNDQwMDE3M2RiMDlhM2I5OTgyMDFhNjIyNDM2M2JkOTM4MzA5YjdkZGVkYmE3YTdlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjJhYmNlM2ZkMzRmMzZlNjg2Yzk2N2VlMTMzMzEwNDEwNmY3MjY2MjQ4NWUyYjMxYjYxMTc0ZTQzMzU2MTE1MSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/yfunctions.py#L1-L19",
+          "version": "repo-lines-v1:sha256:01fbfd0efe0333b91b118d9899fa026517eee43fd86e9f4fc8d2faa22765469d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlZDIyMWQ3ZTQ4ZGMzYWYxN2FjZTUzZTRiZWNkOWJkZDFmNGJiODJjZWRiOTY5NjEwNGE4ODE3MDQ0YzViNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYifQ"
+        },
+        {
+          "resource": "repo://requirements.txt#L1-L2",
+          "version": "repo-lines-v1:sha256:88504c77111c26b3f7b82a8769a0e01765836de292aea80f6e0cf2a77fd267db:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzJmNGVkZGJmNzlhOGVlYjNhY2RhYjZiODNlZjE3ZTI5NzgzODczODczYmY2ZWYwMWZjYmQ2NDE0YjIwYjgzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDk4ZjJmYWRmZmVjNjBlODNkZjRlM2ZkN2FlODczZWVhZGZhYTRmY2JmZDk1MmI5YmRiNzg0NTk3YzMwNGE4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_79b3a6e723db400fb02bbe1ed2c90b8d",
+      "statement": "The workout UI invokes the selected exercise function synchronously from its Start handler, passing four angle thresholds; the exercise runs its own capture/display loop before control returns to the UI result handler.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/front.py#L54-L85",
+          "version": "repo-lines-v1:sha256:d9cb1ec87bc98e20dfb55ec06f30f2eb09d9c64d4b10ecd3025e026eaeff78c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NTNhZjI4ZjA5Nzg3YTAzMTUzN2M5Y2IwZGNlYTAyNGFlY2MzZmY1NDg1OGI2MzgzMDI4MWMxOTRiMDhiOTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2ZjE0ODhjYmZiMTEzOTM3OTJhYmM2Yjc0YTZiMTJkMjQ2ZTQzYWE1ZjY1OWYxNjA5ZTZlOGZkOTU2MTQ5ZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMjdkYTQ3MTg5YWQxNGI4ZjI2M2U1Mjg1NDA2NGU3OTgyYTA5YWMzYWU4ZWI1OWY3Y2U2YjM1NzBiN2Q5NjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDM3MWZhNmEzZmNiN2JiNTBmYzUwY2IzODFkZThmYzFkY2ExMjg5YWExZjI2ZmZjNzRmOTBhOGJkZGIwYzIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L7-L31",
+          "version": "repo-lines-v1:sha256:3446bc7b1c078da7f44c720b9e74aada1b88005b5020d822ccb004ae1849f160:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYTE3ZTYzZWJkYzAwNGMxNmFkMzY1OGJmMmVhOWJmZTEzNmVjZmQ5Y2YxYjYyZDVlOGI0ZGIxZThlM2JjNGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNGJhYTdlNmYxNWZkZDE3NDc2ZThjN2E3YTZmMDg1YTY4MzU3NTY0ZDc3NzMzNTFlNmE4ZGNmZDhlZGYxMzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3Y2JiZTU0M2IyNjU1ODM3NTFhMjFjZDE1ZmY0YjBhZTViYjgwODllOTE2MDU0NDgyZTdkMDYwZWVjZTk4Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhNGZjNmJlNWEzODBhNjZjNTcwOTdlNTE0ZjliZWFlNTVhOGM0ODliZTdiMTdjOTljNjcyNTA3ZjhjMmM3NjkifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L7-L30",
+          "version": "repo-lines-v1:sha256:239ec3d1fdddba1556e3513741469128ec7f1b91208d8b2a88f3daf592a72e59:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MmYwMjg3MzIzYjc5YTU5Nzc3YmFjMjdlMWUzYTAzMGU4MzJiYTI2OTkyMmQ4ODU0YTlmY2E3MzVlMGI3ZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNGJhYTdlNmYxNWZkZDE3NDc2ZThjN2E3YTZmMDg1YTY4MzU3NTY0ZDc3NzMzNTFlNmE4ZGNmZDhlZGYxMzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3Y2JiZTU0M2IyNjU1ODM3NTFhMjFjZDE1ZmY0YjBhZTViYjgwODllOTE2MDU0NDgyZTdkMDYwZWVjZTk4Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI5ZTFiMTcxM2Q5NmFhZmNmM2I4OWNhNjhiMDY3ZWUwN2E3MTc3YmRhZTk4ZDUwODIxYTIzNDY0ZDllYTI4ODQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ddfc2d55dd214af7a251760e126e3e01",
+      "statement": "Both desktop exercise functions open OpenCV camera index 0 and process frames with a MediaPipe Pose context configured with detection and tracking confidence 0.5; they convert BGR input to RGB for pose processing and select 2-D landmark coordinates for exercise-specific joint angles.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L12-L62",
+          "version": "repo-lines-v1:sha256:4c0addd47e92d37eabd76c565ff445627e1c6cbc2ca388ae149d5543c1769347:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhNTFjMTFkZGU0M2JiNmNkZTM5Yzk4Y2VkN2I5NzQ4ZWE1OTJlZGZkYTlmZjQzZmNlNzcxZjdkZjYzMjJjZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMGM4N2YzZGJiZTBkZDM3M2E0ZjNlOTdmYWVjYjYyOTMzMTQxOTgzNGFlZjI4OTIyZjVlZDA3MjQyZGIxZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5ZTMxNDcxOTFiOTkzMWQyODE3ZjJmYjkwNjc2N2JkZmE0NGJjOWE0NTMzYjY2MWQ3MTcxMmJmMmI1ODVlYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMWU5NmRhZDE2MDEwZTM2NzRkODUxMmI1MDc2YjBlZTQ3MTlhOWU4NDRhYmQ5NTc1ZDQwNDdkNTgxM2I1ZmIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L12-L60",
+          "version": "repo-lines-v1:sha256:513ba0f1c476a2a44d4c7bf3e0e69f544e1da76ad226adf220e5c840757a0f38:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyYmE3MjcyNmYxNzI2NzVmMmEzZTAwZjNmOTliYjQyODVkMTMyOWFmOTg0ODkxY2QxN2I0OGRmZmEzYzM3ZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhMzcyZjAwNzdiNzdjMTg3MDNjMjYwNzFiZTcxZmNhNWM0ZTM5OGU2MWMxODcwZWViNGM5MGI1N2IzNDM5M2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5ZTMxNDcxOTFiOTkzMWQyODE3ZjJmYjkwNjc2N2JkZmE0NGJjOWE0NTMzYjY2MWQ3MTcxMmJmMmI1ODVlYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMxNGM5MmQwZjQzYmMxMjAzNDFkZjYxZTU5ZjYxN2E5M2FlZDkwY2I3M2JiOTMxMDAwMGUyZTQzNTllZGZjNTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_42e1db53d33e49ff88558f8b17cc5e04",
+      "statement": "The exercise loops ignore the success result of cap.read and convert the frame before the guarded landmark block; failed reads can raise before that guard, while an unopened camera can skip the loop and lead to a zero-count return. Explicit cap.release and destroyAllWindows calls follow normal loop completion but are not protected by finally.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L169-L186",
+          "version": "repo-lines-v1:sha256:b561f8b58dd55c11dc7532970c5aaf5a7dfe94eaf81b7aa8dc3abe5d376d7ebb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NDFmZGFiZjllOTJkNGQ5YzM5YjAzYTZmOGQxM2ZhYTM0NGE1NGJhZDFkNmU3NzQ2MDI3NTg0YzU2NzEwZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOTYzYTU2NDNhZWVhNmM3NmI2NTkwMzU4MTNlNTMzZmMzYzliNjA0YmNmMjJlNzBlZGEzMTA2ZmQ3NTMxOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmNThiNGJlZjkyNmNjZjY1MWQzZDFjYmVmN2VkMzUzMzkyYTk0YjFkMGVlNDYzMjJhMDE1YjdkOTA3MDZmNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L29-L44",
+          "version": "repo-lines-v1:sha256:dbb9afb609303f7c2018bae80e07e0af2360fb65e6714e028000095b121f9f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MWQ3ZjhiYjhkNzMzYzBmYjJkM2FkNTczOWUyNDNmZTQxMjVkMjdjNmIzZTk0MGE0MzZjOTgwODBjZDQyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlNTlkZWFjY2Y4ZDEyZmFkNmM2ODE1NzEyNTNiY2YxZGI4MDE4MGIzZWE5YzU3ZDBiZDczNzg1MGY1ZWYyY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOTZkZTFlODljZjZiODFiMjBlZDJlMTMyYzIwZmRlNzM4MmJlY2Y0NmJjNGJlNzQxMThiNGU4NzE0NjM3OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxMmIxNGJhYjcwMzMzZmIzZGNjNTJkZWE5ZWUxZThhNWI5MmQ1NmU5Yzc1YzM0ZjYzZjcyZjI5NzE2MzczNmIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L159-L181",
+          "version": "repo-lines-v1:sha256:d7af9724f6256d1fd8d5c7800c191040d5dc00ce7ec4697cde7ffa500a3129e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiZDA5MTBmOGUwYTkxNTRhMzFjOTQwYjIyNzU2ZDEwMDVlYTk5MDY1ZmE3ZGIwMDUyZGMyMjQxMmQ4MmE0MTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzOTYzYTU2NDNhZWVhNmM3NmI2NTkwMzU4MTNlNTMzZmMzYzliNjA0YmNmMjJlNzBlZGEzMTA2ZmQ3NTMxOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0N2FjODQ2NmNlN2Y5MmFkYjM3N2MxMDMwZDA2M2JiNjdiMzM2YTAwZjdkZmFkY2Y4M2U5MDdjYzJhY2Y1MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L28-L47",
+          "version": "repo-lines-v1:sha256:ceb9bead04929cac13ba3f92c4bb60931c88d4531beb0676d377c2a129e4dbf6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MWQ3ZjhiYjhkNzMzYzBmYjJkM2FkNTczOWUyNDNmZTQxMjVkMjdjNmIzZTk0MGE0MzZjOTgwODBjZDQyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhMzcyZjAwNzdiNzdjMTg3MDNjMjYwNzFiZTcxZmNhNWM0ZTM5OGU2MWMxODcwZWViNGM5MGI1N2IzNDM5M2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOTZkZTFlODljZjZiODFiMjBlZDJlMTMyYzIwZmRlNzM4MmJlY2Y0NmJjNGJlNzQxMThiNGU4NzE0NjM3OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA5M2JlYTBhYzNkM2FlZWRiYWY4Y2I2YzQzYjAxZWMyNDY1ZjcwMDI3YmQxNWJlZGE1ZjQzOTAwNzk1MzliYTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fe2cacf6341642498b211707de956cf7",
+      "statement": "Landmark extraction and angle/state updates are wrapped in broad silent exception handlers, so missing pose data or other errors in that guarded work skip frame updates without distinguishing expected no-pose frames from faults; capture-read and frame-conversion failures occur outside this handling.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L156-L169",
+          "version": "repo-lines-v1:sha256:1b58f16fc09a7263472a6cadcf30cdada0e82acfca30529e7e63539c6b89abb7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2N2U5YjY0NGM1ZTM1NDc4M2JlZjQ3NzIxOGY4Yjk4OWNkMDRiNzBmMWE5MzgxZDI2MzBhM2FkM2EzNDQxNDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NDFmZGFiZjllOTJkNGQ5YzM5YjAzYTZmOGQxM2ZhYTM0NGE1NGJhZDFkNmU3NzQ2MDI3NTg0YzU2NzEwZjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhYzliNDYyOTljOThjMmFiODhlNzliMWE2NWZkNWVhNTUyZmIxZjY1OTZlYzQ3YWI2MWE2MDMyNTgzZWYwNGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY2NWE2Zjk0NDA4MDYwNjdjZTJjN2E3NzI1NzFkZDJlYTA0NzQ2ZDliYTliMzUwNGIyNWIxNTg4ZWFlZTgyOTkifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L29-L44",
+          "version": "repo-lines-v1:sha256:dbb9afb609303f7c2018bae80e07e0af2360fb65e6714e028000095b121f9f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MWQ3ZjhiYjhkNzMzYzBmYjJkM2FkNTczOWUyNDNmZTQxMjVkMjdjNmIzZTk0MGE0MzZjOTgwODBjZDQyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlNTlkZWFjY2Y4ZDEyZmFkNmM2ODE1NzEyNTNiY2YxZGI4MDE4MGIzZWE5YzU3ZDBiZDczNzg1MGY1ZWYyY2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOTZkZTFlODljZjZiODFiMjBlZDJlMTMyYzIwZmRlNzM4MmJlY2Y0NmJjNGJlNzQxMThiNGU4NzE0NjM3OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxMmIxNGJhYjcwMzMzZmIzZGNjNTJkZWE5ZWUxZThhNWI5MmQ1NmU5Yzc1YzM0ZjYzZjcyZjI5NzE2MzczNmIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L29-L47",
+          "version": "repo-lines-v1:sha256:74d6f0c8c194018a6caa2d86678a729b075d1ceb12331573e1ae95bfa523eeda:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1YWVjZGU3Mjk5OGFiZDJmYWMzNDhiMzYzOTI4ZDFhNDE3ZGE3MzcwMDgxYmUwYzY2ZDA0ZjUzNmYyNmI2YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhMzcyZjAwNzdiNzdjMTg3MDNjMjYwNzFiZTcxZmNhNWM0ZTM5OGU2MWMxODcwZWViNGM5MGI1N2IzNDM5M2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk1ZWE4MzVlZjFiYjE0YjdkNWFlNGUzMzY1Y2Q2MzM0MjNhZTU3YmQyZjNiZjIxNDgwNDM0MjJlNGI1OWVhZjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA5M2JlYTBhYzNkM2FlZWRiYWY4Y2I2YzQzYjAxZWMyNDY1ZjcwMDI3YmQxNWJlZGE1ZjQzOTAwNzk1MzliYTgifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L91-L99",
+          "version": "repo-lines-v1:sha256:79a0840386ee875df63c48c294b50ed0881eea6eeaf184d0575e04a0b9c37a6f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzY3ZTliNjQ0YzVlMzU0NzgzYmVmNDc3MjE4ZjhiOTg5Y2QwNGI3MGYxYTkzODFkMjYzMGEzYWQzYTM0NDE0NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTdhYTU4ZTMyOGU3MTRlMzM5MTgyMmY2YTYwYjNiNzUyMzEyZGJiNGJkYjAzOGI4NzVkN2IwZGZjNDZhM2ExOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTk4MWE5MWJhMjc2NjAxYTU4MTlkNTk1ZDJhODdlN2ZmZTM4MTE3ZTcyYzYwNTUzZDU2ZTQwOTQzOTk3ZTIzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjFjYTI4MDkzZDRhYmM5YTQ2NjNjYzA3NGExMDc2ZjAxODFmMzM1MzE0YTMxOTljNTk1NjY4Yjk3YTBlMmQxNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4fc6abd1f61446818dec0ade43eb42e9",
+      "statement": "The desktop angle helper uses NumPy arrays and atan2 on three 2-D points, returning an unsigned smaller angle in degrees normalized to 0–180; arm and leg routines feed their respective shoulder-elbow-wrist and ankle-knee-hip landmarks to it.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L43-L62",
+          "version": "repo-lines-v1:sha256:2bcd73a522ee4815440b1f08d7a6f484545a0e91d46478faa7488c219ba0b253:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyZGE5NmJjNDM2N2JlODViZjkzYjg0YjBiZjdmZjk2ODEyYWU2ZDY1Mjg4NTQ3MGQ0ZmNhMDhkMGJiMTU2YzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMGM4N2YzZGJiZTBkZDM3M2E0ZjNlOTdmYWVjYjYyOTMzMTQxOTgzNGFlZjI4OTIyZjVlZDA3MjQyZGIxZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3MjI5YjM5NGY4NGIzN2U2NWYxODAwNTc2MDZmZDc2ODAzODk1Mjg0N2MyZDZhOWEyMTdmNjg2MzEyZDg3NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMWU5NmRhZDE2MDEwZTM2NzRkODUxMmI1MDc2YjBlZTQ3MTlhOWU4NDRhYmQ5NTc1ZDQwNDdkNTgxM2I1ZmIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L45-L60",
+          "version": "repo-lines-v1:sha256:f0753e3f1d217487d354ae528c40d89fd7325e19bb05965d9d8e9887ccfdefc5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyZGE5NmJjNDM2N2JlODViZjkzYjg0YjBiZjdmZjk2ODEyYWU2ZDY1Mjg4NTQ3MGQ0ZmNhMDhkMGJiMTU2YzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhMzcyZjAwNzdiNzdjMTg3MDNjMjYwNzFiZTcxZmNhNWM0ZTM5OGU2MWMxODcwZWViNGM5MGI1N2IzNDM5M2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwYzFhYzJjMmRiZjUyNGFiZTljZmU4MjIxMDAwZTc2ZDM3ZTE3YjIzNDY1MDg2MDRiNWM1MzkzMGFkMmJiM2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMxNGM5MmQwZjQzYmMxMjAzNDFkZjYxZTU5ZjYxN2E5M2FlZDkwY2I3M2JiOTMxMDAwMGUyZTQzNTllZGZjNTkifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/yfunctions.py#L8-L19",
+          "version": "repo-lines-v1:sha256:2a7c0fa4a491e0ca3909cfa726e92ba4310bd3033ce9d81d0fb047a89582512d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjNGExN2RkZWMwOWRlMjFjOWY5ZTkzNTU5OWQ2MzNhZGEyNjU1OTk4M2ZmZjAyY2E1NWE4MWQyMzE3ODU2YjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlZDIyMWQ3ZTQ4ZGMzYWYxN2FjZTUzZTRiZWNkOWJkZDFmNGJiODJjZWRiOTY5NjEwNGE4ODE3MDQ0YzViNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f7d292ce9940433ea0a3b6981368c12e",
+      "statement": "The statistics window embeds Matplotlib figures in Tk canvases through FigureCanvasTkAgg, while each chart selection calls dbgetinfo, which has no definition in the checked-in noFrontEnd/dbFuns.py; the plotting integration therefore lacks its expected data-query implementation.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L1-L60",
+          "version": "repo-lines-v1:sha256:2976112a1f11a57a54ec8889226cb4d3d5105f3220af6f061738db26b45beca2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MmVkMWY5ZTdjYzZhMjgzMWU1M2IyMTI4MjM1MmUxNDg2MzgxZjFlMDI0ZDZmMDA0YmZkMWRjMjc3NWNhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/stats.py#L19-L100",
+          "version": "repo-lines-v1:sha256:225dd0445bc530fedb8f3d04b5ead8c1741cf292009bdce9d8f83db5464ebec6:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MDFhMmZlOTAwNDFmNjQwNzZhYzM3NzEwMjk4MDRlMmIzMDIwMTViYTg1ZDU4NzZlMTYyZTEzN2RlZjk2ZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwMWI3MzJhY2U3YzNkODMwZGFjZTVmY2U2NmQxZGI5MDRhNWNjMWIzNWE5ZmYyNzMxZTdiMDgwYjA4YzdmNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmNjI3NWU2ZGM2MjU4ODczZjgwMDZhMWM3YjllNzIwZjQxZTBhODAyNTBhNmQzNGI4OGUxNzllMTc0MjdlNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/stats.py#L9-L17",
+          "version": "repo-lines-v1:sha256:cc2cb146aa83392f6f0d0110e24b8115bcfbf145ea0b1e99b3c37e80e8487156:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ1ZWJiMmIxYWNhMzIyMTE2NmU0MWZlYjBhNjJhZDVmM2U0YWZhZjVmOGNlZmZhODczYzgyOGNiY2UwODkyNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzVmNWQ5MDUyNWI3NjliYTRiMTE3Yzk4ZDcwNGMwNTc4NDYyYWI2ZTZhZTVkZjkzZTBiMzk0YWE3YzU3MGNiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2U2MWNlYTUwMDQxMGM3NDQ3N2RlNzVmOGU3N2JmZTExNTk1YThjODFkZGUxNTE0ZDkxNmE1MmQyMjM2ZThjZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOThiY2I1NjJiZWY3NjYwZmU1ZWYwMGM1NWQ1YWNhNmQzYzlhNGViMzEzYzhjN2MwZGM2ZTIwOGViZDE4NDI5OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0ea60371555e478cbbb3c32f78f04605",
+      "statement": "The camera/pose scripts under code/ are separate top-level experiments rather than modules called by the noFrontEnd workout flow; the desktop entrypoint imports and dispatches the noFrontEnd exercise functions instead.",
+      "evidence": [
+        {
+          "resource": "repo://code/armscurl.py#L1-L24",
+          "version": "repo-lines-v1:sha256:1a8eb8b1e519ac71f99672a18eee45fe727fe2f32d040b875b8e868ba830ff01:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NTU0NzVkMzUzN2I5OWY0ZDI2Nzk1NGY0MTVmMTNhMTFiYjFjNmUzZDFkODQxZGU2YjAxZWM1OGU5OTcxM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwMWNmMDQ0Nzg1NTJkMmM5ZmQ3N2IwZTJmOGU5YzZlMWYzMmFlNzQ3ZjMxY2ZhOTk1ZDllYzZjNjRhZDYxNjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiYTI1MDc4MzZkZWQ0OTAwMzE1YTIwOGEwNjYxMjgzMTI0NmE3NDNlMDU1MWQ0NDhhODY5MzIzMDZhMDc3YjYifQ"
+        },
+        {
+          "resource": "repo://code/reps.py#L1-L23",
+          "version": "repo-lines-v1:sha256:dd37325af85bda6d1f98d92030fdf9165f97995ea95d35ecf215f76780b5030c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MDA1NzkzYTdjMjhjMWQ2YWJlOGNhNzA0MDhkZDE2MTA1MTJkNmJjNmM3OTkwYzdhMGJhNTI1YjlhZTBiYmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1NWQ0YWZmZmYwZTEwMWY1ODRmNTBlZjM2MDc3MTMzNmIzYzc2MjIxMGMwMmZkYjBlNjkzNWI4NmNiMmRlZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyNmE0NjdiNmFlMmU1Y2Q4ODcxZDJkNGMzOWUyZDNjMGUxN2E3NjU4MDVhNGUyMjM3MDc3ODlhMDViZjEzNTkifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L1-L7",
+          "version": "repo-lines-v1:sha256:e766d2cf7fa605f695232af086b21fe5bee1bfddbf7c6eeaada44d13a1b8c345:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgzMDMzMzMxMmM0YzljMjIzM2JiMDI3NjJiZDQ5ODIwM2IxYzNiZjA1Mjc2MTQ3MzU2OTNiNGI3OWY2ZDE2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmMxZmI4NmNhZjZjNzg2ZGQzODg4MGFkMGE2NTEzOGUzZDQ5NzcwZWVkNjlmMjZlMzdmMWQxM2U0ZTAwNGI0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTg4NTNjZmVlMWQ0Y2FkMGQxZjc5MTMxN2VkYTg4MmQ4ZTI1NWNhNzA3OGEzOWUzY2FjZWQ4ZDZlYWIwNmRmMyJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L1-L5",
+          "version": "repo-lines-v1:sha256:b45dcdbabf0321fe743079d2a6a21b3d8e2b0f00ae56006fb6d568201137554d:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2U1MWVhM2U0M2VkYzY2ZTlmNjgyNmFkNWI4NDVmN2NjZjkxZjUyMjYzNGZlNTRjYjMxNTE2M2U2ODFhZmZjYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWEzNmNhMTljMDg5ZDFlYjI2ZGExZjFkMGM0YThkYWEyYjAxNjU2Y2M4Y2FkMzI4NTc1OTdhZTliYzljMzE1ZCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T07:26:57.360Z"
+  }
+}

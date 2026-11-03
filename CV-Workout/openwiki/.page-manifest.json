@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/persistence.md": {
+      "pageVersion": "sha256:7fc9e8d2649c805e84676cc2bcc1360eb9e52d531e49daea94c5eca35ea963bb",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/architecture/runtime-ownership.md": {
+      "pageVersion": "sha256:0aba133154d3938fc39897cd86fff334259643790193a13c248f44a3b2b33377",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/concepts/pose-counting.md": {
+      "pageVersion": "sha256:aa2830c29efa25de003fe7dc8feafe6a9307e9292fee23d11631197e56a6cc7d",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/integrations/runtime-dependencies.md": {
+      "pageVersion": "sha256:08c541c244e47863292a0d60ff562e0e7c7d6804948a518db3be52d3b785bca6",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/operations/local-development.md": {
+      "pageVersion": "sha256:a7eb436a9bbb52f27168c3c5246a695c11d2e0c49250020e77919e83dd9329d0",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:e2ceaf3a19b59e982eee12d36647c70ddafc0c17dcb73f0bc8aa8fa395fa2a7c",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    },
+    "/openwiki/workflows/workout-session.md": {
+      "pageVersion": "sha256:ec080087f77771be6f7ae9503ba9f5e0848c442e34aded008b113cbca1632096",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "0b91c9e2-da4c-42aa-a558-631a454d901d",
+      "gitHead": "24e889eca356f26cdb678767412f88f7f8074f9a",
+      "sourceFingerprint": "sha256:a579b38712217ed80e0b1d7f5356ee67d0f9a5bbc311fc045bd0044a84513bea"
+    }
+  }
+}

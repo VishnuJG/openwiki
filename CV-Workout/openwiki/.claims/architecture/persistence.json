@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:7fc9e8d2649c805e84676cc2bcc1360eb9e52d531e49daea94c5eca35ea963bb",
+  "claims": [
+    {
+      "id": "claim_474008372aed4c8480ee808c41a8bf0d",
+      "statement": "The SQLite path is constructed from the process working directory captured at module import plus the literal `\\\\test.db`; because that backslash is platform-dependent, the database location can vary with both launch directory and operating system. The startup health check creates `Profiles` only when the table is absent, does not validate or migrate an existing schema, and returns no truthy success value, so `entry.py`'s `if not dbHealthCheck()` warning condition is always taken.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L5-L20",
+          "version": "repo-lines-v1:sha256:a559caea5f838d21997d446d456de87aca125cc9a74bb1043c2cf5b30cf2020f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjYjUzNjdmOWRhMmJiNDk1NTAyZmExNjFmM2ZkYmQyODgzMGNhNzQzMzk5NjlmZjcyNTlmZDBmNzliNWQ1NjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRkZTJkODZhYWIzYjM5YmQ0MWVhYTkyNWI4OTc1NDljMzBlYjlmMmNkYTc2ZDM4YjNhNzA5ZjMxNzA1ZTc2MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2ZTY2OWY1NWFlM2U3MDQ4OTI5YTE0ZGJkMzM1MjhmZWU5NjMzYTM2NDg4ZmQwNmMzMWI5YTUyMGZiYTgyZjUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L9-L12",
+          "version": "repo-lines-v1:sha256:9baabcbc9b3a8eccdf2dfaa188864654a64598812e53883baf64d1c598707c80:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODdjNzdiM2I1MjY5ZjMyZDhhNDIwYWIwN2JiYmNjNjNhNTZmODc1NTExOTBmOGNjNDViNjVhZGViNTYxZTMxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWZhZDliYzk2NzdmOWZhYmVlZTcyNjE0MzA2Y2U1YzFjYWM4ZTc2YWJjYmJmMjA4NzFmMjBlOWE3NjRmM2M4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTA4ZDU0YjYwMmMzYTgxZmY2YjBlNTI5OGU4NjcyZjZmYmM0OGRlMTVjZjc1OTg3Zjk1ZWNmNzI0ZDNmODg3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_46c00d75b68c4d53a6ee7274ae4e8a3c",
+      "statement": "The profile schema declares `USERNAME` as the primary key and stores `AGE` and `EMAIL`; `dbNewUserfun` also creates a username-derived `<username>_stats` table with a date, four left/right exercise-count fields, and eight side-specific maximum/minimum angle fields. The stats table has no declared primary key, date uniqueness constraint, or foreign key to `Profiles`.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L14-L18",
+          "version": "repo-lines-v1:sha256:1ef3a0525be02bd8bb4b41c87b95a7f080589ed0cd78c2c36ba27864f8e2a63c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ5MGZmYjQyOWEyMTkzZjVmNjA0MDMzZjZkOTBkYWRlMGY3MzA1Yjc1OTUxOTY4ZDFkMGM3MDU4MjQ3N2U5MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2U1NTI2ZTM5MmMxYmEyMmRhMDgxYTJjNGExODNjOTJjMGYzMTRmY2NlM2ZkNTA2NjBhOWYxNzJjNzUzMDU0ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzljYzg2NWVkYWI1MmVlZjNjYWM1MmVhZmQ1NmUzNDU3NDAyMmMyZTA4MWRjMzZhOTYyZjBkNzFlYzNlZmJiZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2I3ODQxYTJiMmFlMjdkZGFlYjljZGVkMDE1ZDQ1NmEzOTRlODNiZTkxMGM2YzhhM2IzMWM5NzA1NTkzOTI4NCJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L60",
+          "version": "repo-lines-v1:sha256:9e36f9586d2e7182e848680514f8916d7b2dd0f7d5a03644d5b6c7993e5091da:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b322fca3fe324fa898650b80cdf1a51b",
+      "statement": "`dbUpdatefun` implements additive per-day aggregation: it selects today's row in the user's stats table, inserts a date plus twelve zero values when none is found, increments the caller-selected field, and commits the operation on a per-call connection. Because count updates for left and right sides are separate calls, they are not atomic as one workout; without date uniqueness, concurrent select-then-insert calls can also create duplicate daily rows, and an update affects all matching-date rows.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L33-L50",
+          "version": "repo-lines-v1:sha256:c290873546193fa4f94860c2420c86936fc70919ab4ca2879973fe0fef42581b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxZWJlZmM3MDdkZmFhMzMyZGI4YWE1MTNjNjY4YmVkZTQ5NmVjMzljZjg0ZTYxM2Y3OTIzYzJlOGU1ZDAzNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiYWU0MDk2MDQ2MjEzODk4ODAyNzQ2ZjRhYmVkYTExZmU4YmE5MWI2MTlmNjY3YjI4YjRiMzM2NDY4NjhlMjAifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L57-L80",
+          "version": "repo-lines-v1:sha256:3436fc57ab8caacb590740630e15d8ff2b3f961e374bfd86e24b1103ed7e056c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkNjlmNzJjMDJiMGQ1MjQ3NjU5ZGI1YjVlNWUxYTFlMmVhN2YzNGU1Mzc2ZmIwNGJmNzQ3NDA4ODIwNzY0M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0OWY1ZGQ1N2ZmOTVkYWVmZGU3M2ZjN2QzOTBmNWI5MDJkMjA2YjYyMGU3ZGU5MDIwNTZkNzY0ZDQ2NzZmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY5NjlhZWE0MTJjMTNhYTg4YzMxZGE5ZmVkMTIzMDk3MDZkMmYyMDFkMTVlZDdlY2U3NTRmOTVmNmE5NmVhOTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYxNDllMzJjNWE1ZTQ5OGZkYmEyNTRhM2E1ZTQ1OGI2ZmQwZWVhMmIwODM1YTI3ZWI1MWExNmFiOWM4YWQ1YmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b37035f129cf43659fc6a3e087c86480",
+      "statement": "The UI's `dbUpdatefunsetting` calls are not backed by a definition in the repository: after an exercise returns, `frontdef` invokes the missing function for angle fields, so the first such call raises `NameError` and checked-in code does not implement the angle-write behavior implied by the table schema.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L1-L60",
+          "version": "repo-lines-v1:sha256:2976112a1f11a57a54ec8889226cb4d3d5105f3220af6f061738db26b45beca2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MmVkMWY5ZTdjYzZhMjgzMWU1M2IyMTI4MjM1MmUxNDg2MzgxZjFlMDI0ZDZmMDA0YmZkMWRjMjc3NWNhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L57-L80",
+          "version": "repo-lines-v1:sha256:3436fc57ab8caacb590740630e15d8ff2b3f961e374bfd86e24b1103ed7e056c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkNjlmNzJjMDJiMGQ1MjQ3NjU5ZGI1YjVlNWUxYTFlMmVhN2YzNGU1Mzc2ZmIwNGJmNzQ3NDA4ODIwNzY0M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0OWY1ZGQ1N2ZmOTVkYWVmZGU3M2ZjN2QzOTBmNWI5MDJkMjA2YjYyMGU3ZGU5MDIwNTZkNzY0ZDQ2NzZmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY5NjlhZWE0MTJjMTNhYTg4YzMxZGE5ZmVkMTIzMDk3MDZkMmYyMDFkMTVlZDdlY2U3NTRmOTVmNmE5NmVhOTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYxNDllMzJjNWE1ZTQ5OGZkYmEyNTRhM2E1ZTQ1OGI2ZmQwZWVhMmIwODM1YTI3ZWI1MWExNmFiOWM4YWQ1YmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_41f4cd15f4954a9bb217ffd2596f6577",
+      "statement": "The statistics UI calls `dbgetinfo` for dates, exercise totals, and angle series, but no definition exists in the repository; consequently chart retrieval semantics and the expected query behavior are unimplemented and a stats-button selection reaches an undefined name.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L1-L60",
+          "version": "repo-lines-v1:sha256:2976112a1f11a57a54ec8889226cb4d3d5105f3220af6f061738db26b45beca2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MmVkMWY5ZTdjYzZhMjgzMWU1M2IyMTI4MjM1MmUxNDg2MzgxZjFlMDI0ZDZmMDA0YmZkMWRjMjc3NWNhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/stats.py#L33-L70",
+          "version": "repo-lines-v1:sha256:7452fdd9ab9615f0350f0474ebebb76309c7de0d675d6b6bf59c5973ef1ffd69:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3NWQyZWNmZTJjODMxY2FjMmIxNzg4MGFjMDE2YmE0YTE3NmFlNmFiYjM0YzAzNTIzNTA4OWMyMzlhMWFlYWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3YTc1Mzg4ODExYTVjM2ZmZWVkM2Y2NmU2ZDQ5NDZmYTIxZGExNDI5YjQwOTdjZWVmNmU1MDdhYWEzYWE4OTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0MmE3NWUwOTMwYTEwNjdmNDM0NDM5YWZkMTRlNTRlZGYzMGFlMzAzMDg5MGJiN2I4MmU4ODUyOWY3YWJiMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1OWJkNTQ3ZjU1OThjOGMwMDdjOGRlNWFiOTEyYTMzMzRkOTNjYWFiYmQzODgzZWZmNDBiZTU0YzczNDdmZDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a1e7a5f054249eca693c4a594045385",
+      "statement": "`dbVerificationfun` searches every selected profile field and returns the email of the first row containing the input; login compares that result with the entered email, and signup reuses the same lookup for username and email duplicate checks. The inspected flow stores no password and establishes no authentication guarantee beyond this local name/email comparison; profile age and email are persisted as ordinary SQLite values without encryption in the inspected code.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L23-L30",
+          "version": "repo-lines-v1:sha256:b05024e0cad8d9839ebae91a0b62baec9e83b5828e242ca14cc967cac4349dae:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU2NDhhNmIxNGFkODQ5OTIxNTQ0NTc4NTkxMDhmYWYxODI5MTBlMDNiYjE2NWZiN2I3NjZiMjlhZTRkYzE1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5NjAwYTczZDJlMDJmMzUyYjkwZmVmMWQ4ZDYzODExYmE0YThlZTBjMWJlYWE3YWU0NjU4ZjM2YWEyZTE5OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODI0NDZiOGYyZDg2MDk1YzQzMGMyOTk1OTEwMDFkZjlhMDFhM2QyNzI2ZTI5NjA2ZTY1MmY5NjE3ZmM5M2NiZiJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L59",
+          "version": "repo-lines-v1:sha256:003ce362d1b080787451526f69f2788954415ffe982e70333060b8923db6a800:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJlMTZmMGQ4MWIxOGQ0ZjZmN2I3M2ExYzRiZGZiZjBmYzMwZWMwMTYxYTdjMTZlY2E1NGQwNGYzZDU4NTkxOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L28-L40",
+          "version": "repo-lines-v1:sha256:8c09f65cb966432bb7b13e90e72a39c7c6b7d55d6f0f3ac1346b35fff45400f9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhYzMzYTRmYjBkODJjZjZiMmUxYmRjZDczZmU2MzNiOTYwYTQzOTZmOWZkZjkyZDNhMWRjNTg3ZDY5OTIyMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkNjQxMDRhMDgwMjgwM2IzZGQ3Y2MwZDRiYTk3OGRlYTkyODJkODJkYTZkM2Y0MzI2MDEzZDI0ZjRiZmU0YjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiZjhkOWViNjc0MDRiZTA3N2I1OGZiZDljZDI2YzI1OTI1NzE4NTk1NjYyNTI1NzY3YTAxMzEwNTYwZmJjNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNjOGU0MDcwNmI2NmMyZDkyYmQ2OTMyNjAxNWFmMTc4ODM0MzkzODQwOGY3NTQ0YTJiNTk3NmQxODA3N2E1YjcifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/newUser.py#L23-L38",
+          "version": "repo-lines-v1:sha256:3487b257d6171875b81903c4c5c34e2cf0094e787b73bbb028252daa488795f4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3NWQyZWNmZTJjODMxY2FjMmIxNzg4MGFjMDE2YmE0YTE3NmFlNmFiYjM0YzAzNTIzNTA4OWMyMzlhMWFlYWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyOGU1MjljNmFmYWRkMGUyMWExYTYwZTg0MWQ4MGMyMWY3NGE0YzEzZGVhNWJlMjA0MzI0ZGEzMWYzN2NhYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMzljMDdlY2RhM2RjNjk4NWIxNTM5OGUxZjkyZTNlZjBiZTRhMTkwNzYzYjA1YTg2OTk4MzJlNTVlMDY4ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxMjg3NGE5MjJlNDlmMWY3YmQwOWNmN2ZiMzk1YTAyOTBhMDljOWZlMTA4OTAyMmRhYmU1NzA5M2JmNjQ2YmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_82c86f06ad224aa0aecc63106f9b75fb",
+      "statement": "User-controlled username strings are interpolated into per-user table-name SQL, and the caller-provided `update_key` is interpolated into the update expression. These identifiers are not safely bound parameters or validated as safe identifiers, despite surrounding some table names with single quotes, so username and column construction are SQL-security and schema-change hazards.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L33-L47",
+          "version": "repo-lines-v1:sha256:34152db611f831918955d054201407afab5310d8099e99b2f5d422b0c5c752a6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxZWJlZmM3MDdkZmFhMzMyZGI4YWE1MTNjNjY4YmVkZTQ5NmVjMzljZjg0ZTYxM2Y3OTIzYzJlOGU1ZDAzNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzNWIwMmVjY2UzZjFkZmY2YTZmZTZlNjAyMzM5MTJlNDVhYTI3MTczNDcxMzk3OWFhMmU1ZjAwNDBjNjVmOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdiNzg0MWEyYjJhZTI3ZGRhZWI5Y2RlZDAxNWQ0NTZhMzk0ZTgzYmU5MTBjNmM4YTNiMzFjOTcwNTU5MzkyODQifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L59",
+          "version": "repo-lines-v1:sha256:003ce362d1b080787451526f69f2788954415ffe982e70333060b8923db6a800:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJlMTZmMGQ4MWIxOGQ0ZjZmN2I3M2ExYzRiZGZiZjBmYzMwZWMwMTYxYTdjMTZlY2E1NGQwNGYzZDU4NTkxOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/newUser.py#L11-L16",
+          "version": "repo-lines-v1:sha256:6984b7d0791a094a5353f6db559550606479731ea4cd719e74f8021400fd140a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWUzMGM4ZDdjMDRkZTRjMWVjNjUwN2MxNTQwZDJhMmNmNzYxNDdiNjA4ZTI5Y2Q0NzQyODM2YTFkMGUyNDFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjgwNGMzYzdhMGEwYjFiODk3ZjNlOWM0MGFmOGJkYTQ2MWQ2NjhkNmU3ZTVlZTJhYzlmZDhlZTZkMTc2MDEwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjkzMGViNmI3ZDg5NjE0OWVmNjNlMjgxM2ZkOWQ4NTU3ZjA0YjcxNjNhNDJkOWJmNzExNmJmMmI5Zjc0YzUyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2YzMDFjMjkyYTZmN2M3OGM5ZWI3ZDUyMDE4MmE2YWQxMDg0ZGZhMmFkYjk5OGZmNGRiZjI4YTdmOGMxZDBhNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_23d05dbd7546495881be75d7df250844",
+      "statement": "Profile creation inserts the profile and creates its per-user table using one connection and commits after both statements, while signup duplicate checks happen earlier through separate reads; there is no explicit exception handling or guaranteed connection cleanup around those operations, and a check-then-insert race can still meet the username primary-key constraint.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L23-L30",
+          "version": "repo-lines-v1:sha256:b05024e0cad8d9839ebae91a0b62baec9e83b5828e242ca14cc967cac4349dae:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU2NDhhNmIxNGFkODQ5OTIxNTQ0NTc4NTkxMDhmYWYxODI5MTBlMDNiYjE2NWZiN2I3NjZiMjlhZTRkYzE1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5NjAwYTczZDJlMDJmMzUyYjkwZmVmMWQ4ZDYzODExYmE0YThlZTBjMWJlYWE3YWU0NjU4ZjM2YWEyZTE5OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODI0NDZiOGYyZDg2MDk1YzQzMGMyOTk1OTEwMDFkZjlhMDFhM2QyNzI2ZTI5NjA2ZTY1MmY5NjE3ZmM5M2NiZiJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L60",
+          "version": "repo-lines-v1:sha256:9e36f9586d2e7182e848680514f8916d7b2dd0f7d5a03644d5b6c7993e5091da:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/newUser.py#L23-L38",
+          "version": "repo-lines-v1:sha256:3487b257d6171875b81903c4c5c34e2cf0094e787b73bbb028252daa488795f4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3NWQyZWNmZTJjODMxY2FjMmIxNzg4MGFjMDE2YmE0YTE3NmFlNmFiYjM0YzAzNTIzNTA4OWMyMzlhMWFlYWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyOGU1MjljNmFmYWRkMGUyMWExYTYwZTg0MWQ4MGMyMWY3NGE0YzEzZGVhNWJlMjA0MzI0ZGEzMWYzN2NhYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYyMzljMDdlY2RhM2RjNjk4NWIxNTM5OGUxZjkyZTNlZjBiZTRhMTkwNzYzYjA1YTg2OTk4MzJlNTVlMDY4ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcxMjg3NGE5MjJlNDlmMWY3YmQwOWNmN2ZiMzk1YTAyOTBhMDljOWZlMTA4OTAyMmRhYmU1NzA5M2JmNjQ2YmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_16e77bfbeae44d45aa700929bd70e635",
+      "statement": "`dbVerificationfun` neither closes its connection before returning a matching row's email nor closes it after exhausting rows without a match; persistence functions do not consistently guarantee cleanup when SQL operations raise.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L23-L30",
+          "version": "repo-lines-v1:sha256:b05024e0cad8d9839ebae91a0b62baec9e83b5828e242ca14cc967cac4349dae:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmU2NDhhNmIxNGFkODQ5OTIxNTQ0NTc4NTkxMDhmYWYxODI5MTBlMDNiYjE2NWZiN2I3NjZiMjlhZTRkYzE1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5NjAwYTczZDJlMDJmMzUyYjkwZmVmMWQ4ZDYzODExYmE0YThlZTBjMWJlYWE3YWU0NjU4ZjM2YWEyZTE5OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODI0NDZiOGYyZDg2MDk1YzQzMGMyOTk1OTEwMDFkZjlhMDFhM2QyNzI2ZTI5NjA2ZTY1MmY5NjE3ZmM5M2NiZiJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L33-L60",
+          "version": "repo-lines-v1:sha256:5c356130dbf836d71339bf0cdf5b2b3452be9a171d917857890ce7953c88aec9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxZWJlZmM3MDdkZmFhMzMyZGI4YWE1MTNjNjY4YmVkZTQ5NmVjMzljZjg0ZTYxM2Y3OTIzYzJlOGU1ZDAzNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T07:26:57.360Z"
+  }
+}

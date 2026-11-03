@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0aba133154d3938fc39897cd86fff334259643790193a13c248f44a3b2b33377",
+  "claims": [
+    {
+      "id": "claim_4cfc34d3bab1414fb11a5b9af932f173",
+      "statement": "The most complete wired desktop GUI flow in the repository is under `noFrontEnd`: `entry.py` starts the account/login and disclaimer flow and calls `frontdef` after accepted login, while `front.py` routes exercise and statistics choices. This source-level path does not establish deployment or operational use.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/entry.py#L1-L69",
+          "version": "repo-lines-v1:sha256:1deb793ca1012cb12b363c9ec9e4a38d4878ca5fb718bb581579b5afc644c7be:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MzAzMzMzMTJjNGM5YzIyMzNiYjAyNzYyYmQ0OTgyMDNiMWMzYmYwNTI3NjE0NzM1NjkzYjRiNzlmNmQxNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNWUzZThlN2MxNDZkNDhhZWUwYzEyODBlOGUwZWNjODRiYTJjMzNhMGEyYjc4YTc1YzQyYzdiNmY1MTdmN2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L21-L125",
+          "version": "repo-lines-v1:sha256:12bb095244f88ddec7b12753311206a984b2a440db11558a6b58680a71114646:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyNzEwYjgzODE2M2JlNjhhNzg2OTczNDc0OThkZGE3YTU2MTgzMDNjMjE4ZTQ3ZDYwMTEyNjBjZWFhMDgwMTZjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhMWNjOWQ5NTUxOTM2MGUxNWQ3MjNhN2E1NTMwOWNiMDYyNWFjMmZiOWZlNzM5OTBjODVmZmQyOTcyYWY0ZmQ0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0ZjYyNzVlNmRjNjI1ODg3M2Y4MDA2YTFjN2I5ZTcyMGY0MWUwYTgwMjUwYTZkMzRiODhlMTc5ZTE3NDI3ZTQ4IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_799f2467bd7a4c58b8cec8eeabd7c7ed",
+      "statement": "The desktop account-creation dialog validates duplicate name/email and email syntax before calling persistence to create a profile and a username-specific stats table; login checks the submitted name/email against the stored profile result.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L60",
+          "version": "repo-lines-v1:sha256:9e36f9586d2e7182e848680514f8916d7b2dd0f7d5a03644d5b6c7993e5091da:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L28-L46",
+          "version": "repo-lines-v1:sha256:875d99366e1bdfda725300f4173ed16786632b71a0e7f21556bda85f711fe620:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhYzMzYTRmYjBkODJjZjZiMmUxYmRjZDczZmU2MzNiOTYwYTQzOTZmOWZkZjkyZDNhMWRjNTg3ZDY5OTIyMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmY2FlM2NkM2Y3ZjhmZmNiNjlhZDQ1NzgxMDI5MGFkY2I2YTBkZWFlOWFjMzlkNWU1YTU4YTI3NGQ3MjZjYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiZjhkOWViNjc0MDRiZTA3N2I1OGZiZDljZDI2YzI1OTI1NzE4NTk1NjYyNTI1NzY3YTAxMzEwNTYwZmJjNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmMmEwMTEwNDFlY2YzZDVlZTYzNDc5YmU5NjI2MDZmOWJhZjI5YTE0NDcyZjdhNDgzNzExN2RmOGRkMjg4NWMifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/newUser.py#L7-L44",
+          "version": "repo-lines-v1:sha256:6f57a131ff1c1d88135f14e60a89d0f95cfa78d6ebb967ada531f3c6c7e1e3f8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3ZmFmZmQwYmI5MWI1NzYzNWIwOWI2OTE0NDlmZWFmYmIzYzNmZTkyMWE0NzhhOTIyMGVmNmVjYzUzM2EyZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxODJjNmZlYzNmYzE5YTU0MjAzYmFiMGMzMDY3MmFhMmM4MDYzYWQ4ZWExOWNlOTM3NDUzZTc0OGJlMWM5OGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhOGU0NDQ2YmQzMTY2NzYzMjk5NmM3MTVkYzg1YmMzOTNhNDRhYTgxNGQ1NDJkODliMGQ5MWUyZWE1NmYyMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4Mjc5YjFlYWUwYjhlMzcyOGFjMWQ4NTAxNDdhOTU1NTFiMWFlNzRkODhkYmQ4MjQ4ZDExZjE0MWQ0YjJmMTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ab0273bd976486b8927f075927a1eb9",
+      "statement": "`front.py` owns the workout selector and four side-specific angle thresholds, dispatches to the arm-reps or leg-curls function, and expects each exercise to return right and left counts followed by left/right minimum and maximum angles.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/front.py#L21-L84",
+          "version": "repo-lines-v1:sha256:5ca803243c4c569a76ec206451560906be00955d98d7901bcbba046262f1951f:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3MTBiODM4MTYzYmU2OGE3ODY5NzM0NzQ5OGRkYTdhNTYxODMwM2MyMThlNDdkNjAxMTI2MGNlYWEwODAxNmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlZGQzNTY5YTc3ODZmZTQ2NGY5Mjk5YWI5YjE0ZGVlN2NjOGY5ZDE3NjBkYjQ0MTU5NzRkM2E1NjZiMTdkYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmNjI3NWU2ZGM2MjU4ODczZjgwMDZhMWM3YjllNzIwZjQxZTBhODAyNTBhNmQzNGI4OGUxNzllMTc0MjdlNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1MWM3NDJlZjVhNDRkNWIzMmNhODc4MTViMTE1YjEyNzBhZTA1Mzg0NTZkMWU2ZjNiNTM0ZWQ1MjQ2ODVkYmUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L179-L186",
+          "version": "repo-lines-v1:sha256:bf77e742ab1df5d0e212a559df47c22c17dcbf6cbdbdc2076cf64e21656588c7:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjYxYzZiODg4MzRmOWRmMzJhMmY0NzdhYWE3NTc0MGNjMzAxMzE4OTE3MmYxNGU2ZmE0NzA2YTQyYmViNWQ1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjM5NjNhNTY0M2FlZWE2Yzc2YjY1OTAzNTgxM2U1MzNmYzNjOWI2MDRiY2YyMmU3MGVkYTMxMDZmZDc1MzE5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDg3NTg5YTVlODQ4NzgyZDE0YTJjM2Q2Y2VmNDliNmFmZDBkOGQ4NmViMGFhYjE3NGUxNjM2NTFmMmQ0MDYzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L7-L26",
+          "version": "repo-lines-v1:sha256:8df1374169e2e2035c77b66d8f94ab24945a06e586bbf22cd6d3058abf810ab9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYTE3ZTYzZWJkYzAwNGMxNmFkMzY1OGJmMmVhOWJmZTEzNmVjZmQ5Y2YxYjYyZDVlOGI0ZGIxZThlM2JjNGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwNTIwNjNmODM4Zjc1ZDdkMjRmNjc2MDY0NTIzMjkyZTljYzlhYjk5MzMxMTU4NzVlYjAzZDYyOTVkOTE1NDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3Y2JiZTU0M2IyNjU1ODM3NTFhMjFjZDE1ZmY0YjBhZTViYjgwODllOTE2MDU0NDgyZTdkMDYwZWVjZTk4Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1ZWE4MzVlZjFiYjE0YjdkNWFlNGUzMzY1Y2Q2MzM0MjNhZTU3YmQyZjNiZjIxNDgwNDM0MjJlNGI1OWVhZjEifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L174-L181",
+          "version": "repo-lines-v1:sha256:bf77e742ab1df5d0e212a559df47c22c17dcbf6cbdbdc2076cf64e21656588c7:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjYxYzZiODg4MzRmOWRmMzJhMmY0NzdhYWE3NTc0MGNjMzAxMzE4OTE3MmYxNGU2ZmE0NzA2YTQyYmViNWQ1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjM5NjNhNTY0M2FlZWE2Yzc2YjY1OTAzNTgxM2U1MzNmYzNjOWI2MDRiY2YyMmU3MGVkYTMxMDZmZDc1MzE5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDg3NTg5YTVlODQ4NzgyZDE0YTJjM2Q2Y2VmNDliNmFmZDBkOGQ4NmViMGFhYjE3NGUxNjM2NTFmMmQ0MDYzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L7-L25",
+          "version": "repo-lines-v1:sha256:52009d5611e6275a3e96465e4670aee43cd29f1d6ca83c0e8f9e16c4d91c79a3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MmYwMjg3MzIzYjc5YTU5Nzc3YmFjMjdlMWUzYTAzMGU4MzJiYTI2OTkyMmQ4ODU0YTlmY2E3MzVlMGI3ZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwNTIwNjNmODM4Zjc1ZDdkMjRmNjc2MDY0NTIzMjkyZTljYzlhYjk5MzMxMTU4NzVlYjAzZDYyOTVkOTE1NDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3Y2JiZTU0M2IyNjU1ODM3NTFhMjFjZDE1ZmY0YjBhZTViYjgwODllOTE2MDU0NDgyZTdkMDYwZWVjZTk4Y2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk1ZWE4MzVlZjFiYjE0YjdkNWFlNGUzMzY1Y2Q2MzM0MjNhZTU3YmQyZjNiZjIxNDgwNDM0MjJlNGI1OWVhZjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c58104267234b06b6b0b670d967769b",
+      "statement": "The arm and leg exercise routines independently capture camera frames and use MediaPipe Pose to compute bilateral joint angles; each side's counter advances only after its exercise-specific high-angle stage is reached and then its low-angle threshold is crossed.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L29-L62",
+          "version": "repo-lines-v1:sha256:68b8a3d3ee3b4a9cbeb36556d9c00842c19f0973c1b2cf409c92bba6e3bf6015:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MWQ3ZjhiYjhkNzMzYzBmYjJkM2FkNTczOWUyNDNmZTQxMjVkMjdjNmIzZTk0MGE0MzZjOTgwODBjZDQyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiMGM4N2YzZGJiZTBkZDM3M2E0ZjNlOTdmYWVjYjYyOTMzMTQxOTgzNGFlZjI4OTIyZjVlZDA3MjQyZGIxZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOTZkZTFlODljZjZiODFiMjBlZDJlMTMyYzIwZmRlNzM4MmJlY2Y0NmJjNGJlNzQxMThiNGU4NzE0NjM3OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMWU5NmRhZDE2MDEwZTM2NzRkODUxMmI1MDc2YjBlZTQ3MTlhOWU4NDRhYmQ5NTc1ZDQwNDdkNTgxM2I1ZmIifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/legcurls.py#L83-L99",
+          "version": "repo-lines-v1:sha256:26126e81d4e9980c2b8de1051bcac3aac9cbe03150096e05a5b1062ebd85a5f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3Yzk5ZTM5ZDk4YTBmZGZhYzdiNjljODE2ZWM5NzY5MmRlYzkxOWEyNzMzNDM2N2E3Y2Y0YjZmYWI5OTI5YTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYTEzYzdlY2Y0YzU2MTAzMGNlZWM2NTg4ODA4YzBjODg5OTQxYzdjYWYwNmQ0ZTY3ZmM4MmMyZWNlYmM5ODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNmMmZmNjk0YWQ3MDg1NGExMDUwMjRkMDRkNzY3YTcwOTNjODhhZDk0MTgxMjE5NmE4NGMwYjFjZjIwZThmZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI1YzJiMjVmMjNlMjkxYTU1OWUxYzA4NGYwMWVjOTUxZWQ5MDM3NWYxNzRhZjFjYWJlZGJmMGU5NGE5MDc4MjYifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L28-L59",
+          "version": "repo-lines-v1:sha256:2ef09bec8cb6dfd868b65df4b40cbf33ffb6e23e759e05a44b78937d03925646:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MWQ3ZjhiYjhkNzMzYzBmYjJkM2FkNTczOWUyNDNmZTQxMjVkMjdjNmIzZTk0MGE0MzZjOTgwODBjZDQyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3NGE0ZDUwZWY1MGM5ZGJhMGZlNjU0ZTgyMmI0NDllYWMxOGMyNzM0YWY5MTBhNDVjMTVhMDM1ZmQ1ZTc0ZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOTZkZTFlODljZjZiODFiMjBlZDJlMTMyYzIwZmRlNzM4MmJlY2Y0NmJjNGJlNzQxMThiNGU4NzE0NjM3OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4Mjc4ZGI1NGQwNzhmNDIzMTU5ZTk3Njk0MzNmOTcwOGM2ZDAxNWQ4NTdjODUxNDAyNDYxOWM4ZTNjMjc1MGEifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L75-L88",
+          "version": "repo-lines-v1:sha256:759787b0e53c96901b2cb3b5a7d8c787590a05c839db004c85f807b89f5bdde8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3Yzk5ZTM5ZDk4YTBmZGZhYzdiNjljODE2ZWM5NzY5MmRlYzkxOWEyNzMzNDM2N2E3Y2Y0YjZmYWI5OTI5YTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYTEzYzdlY2Y0YzU2MTAzMGNlZWM2NTg4ODA4YzBjODg5OTQxYzdjYWYwNmQ0ZTY3ZmM4MmMyZWNlYmM5ODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExZmMyODYzZGUwMzY1YjY3ZGMyNWM3NWQ4MzA3YWQ4MTE5OGI2MTM4MDc5ZjFkOTVjY2VlZmY4ZjQ5MzM2OGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4NzIwY2U2YzQyMWM1ODkzNmU1MzlmN2MzMWJhZWEwZmZhZjhkNDdhMjBmNjdlYjA1MTdmYmZhNmQ3MGFkN2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee21dbb2703a4a57b74cbe7021db055e",
+      "statement": "The SQLite module constructs its database path from the import-time working directory and a literal `\\\\test.db` suffix, ensures only the `Profiles` table in its health check, and creates a separate `<username>_stats` table for each new profile.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L1-L21",
+          "version": "repo-lines-v1:sha256:e9b07c96575bcde5f2cc87360c9a5c38d3b815c6477ee6ca252799d9a70e25b8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MmVkMWY5ZTdjYzZhMjgzMWU1M2IyMTI4MjM1MmUxNDg2MzgxZjFlMDI0ZDZmMDA0YmZkMWRjMjc3NWNhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmNDYyNjlkYmMwYTI3NjZmNzAyNWY1YmU0OGFkOTMyNmJhNmUwZjE2NjQzMmQzZjc1ZTQyNjI4MjQ1ZDYyMzMifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L60",
+          "version": "repo-lines-v1:sha256:9e36f9586d2e7182e848680514f8916d7b2dd0f7d5a03644d5b6c7993e5091da:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_916a827ea48245f1bd72d1714953d5b4",
+      "statement": "`dbUpdatefun` stores daily exercise counts in a user-specific stats table keyed by the current date, adding to an existing date row or inserting a zero-filled row before adding the count.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L33-L49",
+          "version": "repo-lines-v1:sha256:e50b021dd13937b80c66e6121d3134248c8388874a61cd8f523a045a877723be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxZWJlZmM3MDdkZmFhMzMyZGI4YWE1MTNjNjY4YmVkZTQ5NmVjMzljZjg0ZTYxM2Y3OTIzYzJlOGU1ZDAzNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1MGQ3ZmRkOTdlZWNjNWI5OTM0ZTM0YmFkZjFjZjg3ODhhNTVlMTQ1ODQwMDdhMzMzMTQxMjY1OGE2MWQ5OGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_593c859895b441a0b7bc949e93c83df3",
+      "statement": "The exercise completion handler calls `dbUpdatefunsetting` after its optional count updates, but this function is not defined in `noFrontEnd/dbFuns.py`; consequently the current handler raises `NameError` before displaying its result, including when both counts are zero.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L9-L60",
+          "version": "repo-lines-v1:sha256:bb037c2134e592567c72235ad580901a8d53c9c8f6a23e5979d3a1942e855ce4:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0NDY5YjcyNmJkMjBlYjc0NGY5YzkwMjk3NGNkZjk0N2QxNDE4OWMxMWIzNWQ4ODBjOTIzMzZmMmE1NzE4MWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1YWFiOGZkZWEwMjczNWMxY2Y4NmU0MzQyOTNjMjZjMDY5MTNmODE2N2RkNjkyZWM5ZDQ2NTg0NjQyNTk5NDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L54-L85",
+          "version": "repo-lines-v1:sha256:d9cb1ec87bc98e20dfb55ec06f30f2eb09d9c64d4b10ecd3025e026eaeff78c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NTNhZjI4ZjA5Nzg3YTAzMTUzN2M5Y2IwZGNlYTAyNGFlY2MzZmY1NDg1OGI2MzgzMDI4MWMxOTRiMDhiOTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2ZjE0ODhjYmZiMTEzOTM3OTJhYmM2Yjc0YTZiMTJkMjQ2ZTQzYWE1ZjY1OWYxNjA5ZTZlOGZkOTU2MTQ5ZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMjdkYTQ3MTg5YWQxNGI4ZjI2M2U1Mjg1NDA2NGU3OTgyYTA5YWMzYWU4ZWI1OWY3Y2U2YjM1NzBiN2Q5NjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZDM3MWZhNmEzZmNiN2JiNTBmYzUwY2IzODFkZThmYzFkY2ExMjg5YWExZjI2ZmZjNzRmOTBhOGJkZGIwYzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0838e168ecbc4bfe9560995d509a5eea",
+      "statement": "The statistics UI requests arm/leg history through `dbgetinfo`, but that function is not defined in the imported `noFrontEnd/dbFuns.py`; selecting either statistics series therefore reaches a missing data-query boundary before it can render the requested charts.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L1-L60",
+          "version": "repo-lines-v1:sha256:2976112a1f11a57a54ec8889226cb4d3d5105f3220af6f061738db26b45beca2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MmVkMWY5ZTdjYzZhMjgzMWU1M2IyMTI4MjM1MmUxNDg2MzgxZjFlMDI0ZDZmMDA0YmZkMWRjMjc3NWNhNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NjI2ZGQwYWY5YmViYzgwM2NlOGI4NDI2NzhmMGJkYTg2NWRlMDRmMjBhNjBlZDVhZTI3NzIzYjUwOGY3YzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/stats.py#L19-L100",
+          "version": "repo-lines-v1:sha256:225dd0445bc530fedb8f3d04b5ead8c1741cf292009bdce9d8f83db5464ebec6:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MDFhMmZlOTAwNDFmNjQwNzZhYzM3NzEwMjk4MDRlMmIzMDIwMTViYTg1ZDU4NzZlMTYyZTEzN2RlZjk2ZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwMWI3MzJhY2U3YzNkODMwZGFjZTVmY2U2NmQxZGI5MDRhNWNjMWIzNWE5ZmYyNzMxZTdiMDgwYjA4YzdmNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmNjI3NWU2ZGM2MjU4ODczZjgwMDZhMWM3YjllNzIwZjQxZTBhODAyNTBhNmQzNGI4OGUxNzllMTc0MjdlNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3166fed1864d4789bcd946f4238d07cb",
+      "statement": "`dbHealthCheck` has no return value, while `entry.py` displays an unhealthy-database popup when that value is falsey; therefore the popup is shown on every normal execution of the check, even if `Profiles` already exists.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L9-L21",
+          "version": "repo-lines-v1:sha256:1adc32bebc3a30bbc7ad06252a69bb31c868740a8690f07420fbbf2cde4c0aef:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0NDY5YjcyNmJkMjBlYjc0NGY5YzkwMjk3NGNkZjk0N2QxNDE4OWMxMWIzNWQ4ODBjOTIzMzZmMmE1NzE4MWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1YWFiOGZkZWEwMjczNWMxY2Y4NmU0MzQyOTNjMjZjMDY5MTNmODE2N2RkNjkyZWM5ZDQ2NTg0NjQyNTk5NDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmNDYyNjlkYmMwYTI3NjZmNzAyNWY1YmU0OGFkOTMyNmJhNmUwZjE2NjQzMmQzZjc1ZTQyNjI4MjQ1ZDYyMzMifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L9-L12",
+          "version": "repo-lines-v1:sha256:9baabcbc9b3a8eccdf2dfaa188864654a64598812e53883baf64d1c598707c80:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODdjNzdiM2I1MjY5ZjMyZDhhNDIwYWIwN2JiYmNjNjNhNTZmODc1NTExOTBmOGNjNDViNjVhZGViNTYxZTMxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWZhZDliYzk2NzdmOWZhYmVlZTcyNjE0MzA2Y2U1YzFjYWM4ZTc2YWJjYmJmMjA4NzFmMjBlOWE3NjRmM2M4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTA4ZDU0YjYwMmMzYTgxZmY2YjBlNTI5OGU4NjcyZjZmYmM0OGRlMTVjZjc1OTg3Zjk1ZWNmNzI0ZDNmODg3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_84b7353be945467a932a48b514bb620c",
+      "statement": "The login loop can break without assigning `tempval`, but the code evaluates `if tempval` after closing the login window; exiting before successful login can therefore raise `UnboundLocalError`.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/entry.py#L28-L47",
+          "version": "repo-lines-v1:sha256:6ef3c5ea118aa760572fc55fa46b1d4652867046fa3788553cdaa9939f8dd61c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhYzMzYTRmYjBkODJjZjZiMmUxYmRjZDczZmU2MzNiOTYwYTQzOTZmOWZkZjkyZDNhMWRjNTg3ZDY5OTIyMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyM2Y2ZDE5NjI1NTA1ZmM2NGY2M2ZlYjlkZTVlM2M5Yzg2OGI5MDMyYmQyOTMwNjAwOTlkNWZkYmRhMmM4MjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiZjhkOWViNjc0MDRiZTA3N2I1OGZiZDljZDI2YzI1OTI1NzE4NTk1NjYyNTI1NzY3YTAxMzEwNTYwZmJjNDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3OThiMDAxNTk0MzdlODdhMWJjYjg1NzYxMDkzMzc4MTc3YWFkN2FhYzBlYjQ1OWYxZTIwOWY2OTg5MWUzOTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_94b72edea4bd4b57b552c04dcc10b7dc",
+      "statement": "The `code/` camera scripts are separate artifacts from the desktop exercise path: they run their own top-level capture loops and import the sibling `code/yfunctions.py`, whereas the desktop imports modules in `noFrontEnd/` and shows no call to the `code/` scripts.",
+      "evidence": [
+        {
+          "resource": "repo://code/armscurl.py#L1-L76",
+          "version": "repo-lines-v1:sha256:038f2dd319dc96257cf2b19d9fc8eb2ada20df0ddc9ad1f1a96bf07b3e7bf456:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NTU0NzVkMzUzN2I5OWY0ZDI2Nzk1NGY0MTVmMTNhMTFiYjFjNmUzZDFkODQxZGU2YjAxZWM1OGU5OTcxM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyYzhhMmJlMDNjMGNhZTM0MDAyMTY5ZGFkZDY4MzgzODkxNWI0MmYwNDhlYTMxMmU2M2FmNjg5ZTYzZjBkOGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://code/reps.py#L1-L56",
+          "version": "repo-lines-v1:sha256:992fe496e32d3b4f703c66860e021dab0106861b6d00da70ec037e9a84307c9f:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MDA1NzkzYTdjMjhjMWQ2YWJlOGNhNzA0MDhkZDE2MTA1MTJkNmJjNmM3OTkwYzdhMGJhNTI1YjlhZTBiYmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MjFkNTk1MWQzMmNiYzM3NDVmYzJlY2UzM2MwM2VlZDc1NmViMjNiZGM5YmE5MDE4ZjA0YjBjZmY4YjY3YTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L1-L8",
+          "version": "repo-lines-v1:sha256:7b3d1379e3834bf870ff5d3386cab5801f3b4e90b3bfd681f5a34b752ef3043f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgzMDMzMzMxMmM0YzljMjIzM2JiMDI3NjJiZDQ5ODIwM2IxYzNiZjA1Mjc2MTQ3MzU2OTNiNGI3OWY2ZDE2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDg4OTQ2NTNiOWY1YTBkZmQ1YWEyNjUxN2ExYTJmNmMyOTIxNWI5NDQ5NWZjYjA5MzAzNjkxZTY2NzA5NDQ4OCJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L1-L6",
+          "version": "repo-lines-v1:sha256:3047c7850555168e6d49fa67b31b5496c88c4258249baa4e11e98d7730343ad1:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDdkOTRiYWY0ZDk2NDk2YmIyMWFhYmJkNDA5OTVlZDUzYzhlYzVmNjdkZTc1ZmI0YjNlYjFlMjA0YzZhOTk2ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmM3OWE0YWFjNjBkOTA2ODBhZTE0N2U0MDg2MzAxN2RkMWJmM2M1YTg4YTU5MmU3ZWRlNzJlYWZkODAwMzkzYSJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/reps.py#L1-L8",
+          "version": "repo-lines-v1:sha256:84d929fa3f1667043f82b28a93d54fcb13e748b89842e985cd43e277758a8d93:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQ1NTQ3NWQzNTM3Yjk5ZjRkMjY3OTU0ZjQxNWYxM2ExMWJiMWM2ZTNkMWQ4NDFkZTZiMDFlYzU4ZTk5NzEzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjliNTE4YzUyNmI0ZWVjODc0OGZkYzhhYTgwZDU1ZjlmZWFmZDY1OGMwNWZjZjg1Y2RkZTcxODAzOTY2YjlmNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDllMzE0NzE5MWI5OTMxZDI4MTdmMmZiOTA2NzY3YmRmYTQ0YmM5YTQ1MzNiNjYxZDcxNzEyYmYyYjU4NWViOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c3e674f4d3c4653a9d3dced26bbef3b",
+      "statement": "`code/index.html` is a dashboard template that extends `layouts/base.html` and refers to a `getvid` URL and a `data.calories` template value; those references do not establish a connection to the PySimpleGUI desktop path.",
+      "evidence": [
+        {
+          "resource": "repo://code/index.html#L1-L20",
+          "version": "repo-lines-v1:sha256:eb71a687945dca7b9109ed1c0f6095af299b275a0c01da23736dc39234ff8964:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ZDRhNDQ4NTMwNGExZDkzMGNmY2M1OGU1OWNjMjdiMWNmZTc1MDFhY2M4ZjY5ZjBiZWI1Y2RjOTVlNzY1YzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1ZGQ2MmRhOTBhNDQ1OTg4YzY4ZjNiYjE5ZDVkNjIyMTVkYjBmM2E1YzFlYWZiNTE0ZDFjYzYzOWEyNTIzMjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlZjI5OGMwOTkxYmE2MmZjYTBjMjNkMjFmYTRiNzI1NDM5MTgyMmQ2MzAwODZkYjYxY2I3YWM0YjhmYTUzM2MifQ"
+        },
+        {
+          "resource": "repo://code/index.html#L49-L68",
+          "version": "repo-lines-v1:sha256:47cba1bc7ccf9de6252584b94e316d5faa74c90caa581cb67ae3d84af6c44d85:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkOGJiZjYyMDNjNjIyODJjYzNmMzA4NzgxNzFlYmRlMWM1ZTgwMjMwODVjMGQ1YjgwOGRkNTY2MWNlNzU1NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxMmQ2YTYzOGEyYTQzNzFmNWFmODVmMzM4ZWFmYWI4OGY0ZTg1MDQ0YmRiMDU2MTJkYTQ2MDgwYWJiZjFiYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI0N2QxMGQxYjhhZjNlZTcwNTJhM2YwOWY2MWUxZDc2YTRmODFkOWQwYTRhZTMxNWI1ZGMzMTVkYmFlY2FlYmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4MDYyYTE1YTI1MzI5NzExZTI4MjZiZjViYjUxMWRjOTY1ZWE0YzczMmZkZGIzZjZkMDk0ZDg3YWVhMGZiNmUifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/entry.py#L1-L8",
+          "version": "repo-lines-v1:sha256:7b3d1379e3834bf870ff5d3386cab5801f3b4e90b3bfd681f5a34b752ef3043f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgzMDMzMzMxMmM0YzljMjIzM2JiMDI3NjJiZDQ5ODIwM2IxYzNiZjA1Mjc2MTQ3MzU2OTNiNGI3OWY2ZDE2NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDg4OTQ2NTNiOWY1YTBkZmQ1YWEyNjUxN2ExYTJmNmMyOTIxNWI5NDQ5NWZjYjA5MzAzNjkxZTY2NzA5NDQ4OCJ9"
+        },
+        {
+          "resource": "repo://noFrontEnd/front.py#L1-L8",
+          "version": "repo-lines-v1:sha256:68290208a2f60280175db9812b2d004cd1e1b422961d5bcae3b283bfaafb52ac:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk3NGQyYTNmNmQ1YWIyNDQwMDE3M2RiMDlhM2I5OTgyMDFhNjIyNDM2M2JkOTM4MzA5YjdkZGVkYmE3YTdlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjJhYmNlM2ZkMzRmMzZlNjg2Yzk2N2VlMTMzMzEwNDEwNmY3MjY2MjQ4NWUyYjMxYjYxMTc0ZTQzMzU2MTE1MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9978e0480de14690ab6732851b67410a",
+      "statement": "`dbFuns.py` interpolates account-derived table names and the supplied update column into SQL statements, so account naming and update-key changes must remain coordinated with the database schema and SQL identifier handling.",
+      "evidence": [
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L33-L47",
+          "version": "repo-lines-v1:sha256:34152db611f831918955d054201407afab5310d8099e99b2f5d422b0c5c752a6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxZWJlZmM3MDdkZmFhMzMyZGI4YWE1MTNjNjY4YmVkZTQ5NmVjMzljZjg0ZTYxM2Y3OTIzYzJlOGU1ZDAzNjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzNWIwMmVjY2UzZjFkZmY2YTZmZTZlNjAyMzM5MTJlNDVhYTI3MTczNDcxMzk3OWFhMmU1ZjAwNDBjNjVmOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdiNzg0MWEyYjJhZTI3ZGRhZWI5Y2RlZDAxNWQ0NTZhMzk0ZTgzYmU5MTBjNmM4YTNiMzFjOTcwNTU5MzkyODQifQ"
+        },
+        {
+          "resource": "repo://noFrontEnd/dbFuns.py#L52-L60",
+          "version": "repo-lines-v1:sha256:9e36f9586d2e7182e848680514f8916d7b2dd0f7d5a03644d5b6c7993e5091da:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjE5MTAwNzY1NjFmN2I4OGJlMTFhY2MxZTFiZDY1MDJiZjkwNTgwNjAxZGIwMmEyNjI1NDQ4YmZkMjYyMzU0YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk2MjZkZDBhZjliZWJjODAzY2U4Yjg0MjY3OGYwYmRhODY1ZGUwNGYyMGE2MGVkNWFlMjc3MjNiNTA4ZjdjOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc1NTIyZWMxZjk0NjUxNWM5YjY4MThiNTkwMTk0MjhiMTk4MWYyZjM1OThjZGE3YjFhM2RhNDFjOTE3NDBiMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T07:26:57.360Z"
+  }
+}
