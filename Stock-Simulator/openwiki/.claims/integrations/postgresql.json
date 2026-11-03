@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:efe88a3043417d5b1aaf6516c4afe82e9b5bfb799f21680ad4de3af51c898a14",
+  "claims": [
+    {
+      "id": "claim_e123ef685ae84c15b993090df350d638",
+      "statement": "The `Database` wrapper requires PostgreSQL `user` and `password`, connects immediately with defaults `127.0.0.1:5432/stocksdb2` unless overridden, and creates one cursor for the connection.",
+      "evidence": [
+        {
+          "resource": "repo://src/database.py#L4-L7",
+          "version": "repo-lines-v1:sha256:24b24a39abfc618d0c8e5e6d586bfc775d6543443fbc71d54d746c69e291652b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ1OTZlYzVjYzY2ODQ4ZDNjOGRiOGRjYzYyYzBmMzJlMjcyODk4MjgzZDA0NzUzYjdmMmUxOGY5YzMyNmNkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgzMzA3ODU0ZDA1OGE2OTE0YjkxMjZmNzZiMzYzY2M3OGQ5N2YzMzIxOTcxNTE4NjlkOGQ2ZDgwNjI5Yjc0NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI3MjFhOGM4OTUyMWUzZGI4ZWI3MzZkNmIxMzBjYTYxN2QzZjkxMWRhNzAwNGFhNWFkMzNjOGUyZTRmODAwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRmNzk4MjgyNGRlNzRiY2Q0YWZkMmY2ZTQwZDFhMGI4NzNiNTg0MTMzMWJiZWI1ZTM1NmY1NjMzZmY0M2U4ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_228d4ce989aa430eb54e53d329136216",
+      "statement": "`Database.execute_query` executes with parameters only when the supplied `params` value is truthy and commits after each successful execution; `fetch_all` returns the current cursor's `fetchall()` result, while `close` closes cursor then connection. The wrapper has no rollback or exception-handling path, so psycopg2 errors surface to callers.",
+      "evidence": [
+        {
+          "resource": "repo://src/database.py#L9-L21",
+          "version": "repo-lines-v1:sha256:30fc458dcd557483f3726c110f5df78f637068f0d312a04ae650dd1a888649a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYzUzNTAxYzY3OWJjMGMxODU5MWU4MDFkY2EwMjA4YmMwNGYzOWMzNWZjZWM2M2VhZjQ0NDJmMjE4ZjI2M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYzg2OWFlNmEwOWJjNzYwMmRkMjU1ZmI2MDJjY2I3OWUyZDZhOWI2MzBlZDM4MDk4YTVjMWIxMTkxYzQ4MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ZGJlOTI3ODg2ZWNhYmU1NWU1MWExODQ3NjI2ODVlOWFiNDdkM2QxMDgwNTkyOWExYzRhOTRkNjQ4ZTc2MWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f80319af9e1644f8add7ef9c3393ef4e",
+      "statement": "The active `src/app.py` entrypoint starts `StockSimulator` from `src/login.py`, whose login handler only prints credentials; there are no repository callers of `Database`. The root-level prototype scripts instead use psycopg2 directly, so their persistence behavior is not behavior of the active application or the wrapper.",
+      "evidence": [
+        {
+          "resource": "repo://doc1.py#L74-L80",
+          "version": "repo-lines-v1:sha256:f602ddca52c9e706a81fded1de988ac8560510e9335e8fdbed290e5b157d1d5b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmExYmEzZWY5YjRjYzJmOGM2NjRiZDA4OTZmMDRmNzJkYmNhNzY0ZDczNjJmMzY1YmFhYWI1YjNjZGRhNzc3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzkzNDliMDlhMDEwZmRmMTM3MDcxNTVlOGViMWIyNzMwYWZkMTM5OWY2ZTI4OTVlNmI3OTZhNjgyNjUwYmEwNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTViMzIyZWU5YTkzZGQ5OTZiN2JiMWFiNTVjMmE1ZDRiY2ZjNmQ2OTI2ODE5MzRmYzI4ZDIwMWZiZTMyY2JiZCJ9"
+        },
+        {
+          "resource": "repo://doc2.py#L223-L230",
+          "version": "repo-lines-v1:sha256:3b1bc5c7840b67a9c86ef98f917253ca93b13afa2b152ec166543e368a2df893:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWMyOGY5ZTBkM2U5ZjVkY2MwYmQ1NDJmNzg2YzU0OTdiZjM1YTY4YWUzNDcwNWI2NDdiNjczNzM1NDc3NGVlYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDNmNTFjNjY4NjNkODExNWZlYzY4MWZiODhmNWM5YjIxMmVkZDQyYmQyY2E5ZjlmYWMyNTA1ODU5MDVkMTUwMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWIyOTAxZjRhMzczNzc5NTU0YjU0MzRjMjViMDBiOTI2ODNmNDk1MTBiNjczZmI0OWM1ZmZjODFhYmM4MWRhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmNiOWQ5OWYxYjg1OTZhZTExNDVhYTNlNDQ3ZjYwMzU2Nzg0MzRjY2EwM2QwOWUxNzI4NjljMWZhMDJiZmNmNiJ9"
+        },
+        {
+          "resource": "repo://doc3.py#L79-L83",
+          "version": "repo-lines-v1:sha256:d23a785bcac6ab93e523b99a424b07f248672427a46bee3463cf2c2bdd867f67:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIxZDU0OTVmYzk1MzQ0YTY3Njk0NzQ3MTU5ZjczM2RmMzQ1NTFjN2I0NDRmMTVlYTkxM2UxNjFjYmVjMWU3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGY4Y2M4ZmFiZTlhZmJlZjQ0M2U3NjEyZjM4Yjk1NzI3NWZmMGJhZTJlNGIzYmQ5YWQ3NGJmYzA2MTZkMzc4MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTc2MzQ4MTBkZTZmMjBmNGUxMmU5MDQzZTc4MjRiYWU3MzM3ZDU4ZGJmMDhlZTA2OTk4MTZjMGY3ODE3MzFiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzY0NmYzYjE1NTgzMTcwOTAzZWJmOTEzMzUwNzU2YWVhZjkxMDIyOWFkM2RkZWZiNGEwMGQxNGU0YmI4MmI3YiJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L26-L35",
+          "version": "repo-lines-v1:sha256:2af4f63b9aa75f4e3cc4515669e11c07f9471bdce0ab85c13c01bb610ff68caf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3OTgxMWYzOGFjN2EzMzY5MjNkM2U0Y2I5ZDIwM2UxMmFiYTYwMmI3ZDUxOTk4ZTliZTBkYmE4YmY4ODcxZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViOWQ0YjkyZTNiMTdiZjdjNWY4YWFlM2MyODBkNmEwZjcyM2U2MGQwM2E0MzA0ODkxMTRjODMyOTMyNTgxZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MWE3Yjc1NjI0MmQ5ODE0M2MxODgzM2M2MjdmYzJjNDhmMGEwMjkyMTY2YWE1ZTI2NGY3NzUzY2I0YWI4YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3ac3ffecda304a888991e9aac8e42481",
+      "statement": "The legacy account-creation prototype connects as a hard-coded PostgreSQL administrator, inserts account and client data, creates a PostgreSQL user named from the submitted email, and grants that user the existing `clients` role. It commits these operations separately and does not provision `clients`, so failures may leave partial setup and the role is an external prerequisite.",
+      "evidence": [
+        {
+          "resource": "repo://doc3.py#L79-L123",
+          "version": "repo-lines-v1:sha256:c97eacde0d15349f243f09886b81d565cd676a8da23dcf3fb57f30a46fc7d607:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWQ1NDk1ZmM5NTM0NGE2NzY5NDc0NzE1OWY3MzNkZjM0NTUxYzdiNDQ0ZjE1ZWE5MTNlMTYxY2JlYzFlNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyNDEzOWZiYmQzYmEzZTAwMGEzYTk4YTZhZTdjOTVhNWFhMDNjNTU2MDc2M2IzNjg0Y2YwODk3ZTU3MTllMmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NjM0ODEwZGU2ZjIwZjRlMTJlOTA0M2U3ODI0YmFlNzMzN2Q1OGRiZjA4ZWUwNjk5ODE2YzBmNzgxNzMxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YTI0Y2VmMGQxMWZlZGM4ZDg3YjMzZWIwZmQ1ODcyOWY4MWQ0ODdlMTA3MDIyOTY1MzBiYTg4MzJlM2RkMzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_040c02a94ba146b2a73186c5f7ba5bf8",
+      "statement": "Prototype SQL references `account`, `client`, `shares`, `a_shares`, `transactions`, `company`, and `events`; these references demonstrate usage only and do not establish a PostgreSQL schema.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L129-L169",
+          "version": "repo-lines-v1:sha256:26d8ea9cc34c403ebdee2a7162d17541ff6d772478b094166c13a1a51acf1f66:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjNDZlYTkwMDU1ZjAzNTg0Y2M2NjA3ZDM3ODcxMDhkMzkxOWRjNzEyZTQyZmQ5ZDc3MThkMjhmOWUzZDE4M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkZmQ1NjhkMWQ3MDA2Y2U3OWMyNmYyMGU5MjE4NTk1MjY3NmUxZjAzZjVlOTllYzNlYWJiYjYxOTg4YjFlZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQyYjY1MWQzM2FhZGZkNjNiMDlkMWExYzAzMjViYmU0OGYwNjU0YWQzYTZmMTdjYzM4NjZhZTU5Njc1MDBkNmYifQ"
+        },
+        {
+          "resource": "repo://doc2.py#L61-L72",
+          "version": "repo-lines-v1:sha256:9b28de116ea75d89faa3070c83a302157b61278ff85c73ffa01c76bc8ad3c429:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwNjRjNzRkYmYxNzM1YmY1MDg1ZWM4MTA4YmNiZTU3YTgzY2RhZDY2MGZlMTllNjVkMDJmY2UwNTI5MmVlMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdkZDdmNzRjNzI4YTZlOGIwOGNlZTkzYzg3ZGZhNDNhNTI3MGVlZWIyNThmYTU0Yjg3Yzg0ZGY4MDkxNDliZGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkN2YzZDU5OThlMmJkYzNjMzU1Yjk1MmU3ZGQ0NTAzNDI1NWU5ZTJiYzIyY2RiZWQ5OGY3YTQzZWU4ZDk0Y2UifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L239-L270",
+          "version": "repo-lines-v1:sha256:9cb05d82c4ae5ef52bcaebab937e03c16f2bfeecf0910fe001d23340c0bc55cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3ZTQwMWRhZDljMDBkZTczYmE2MDUyOWNiMTlhMWY0MTUwN2Y3ZTE2MTE1NjgzMmZkNDIyYTg0NmEzMmUyMzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzNzEwZjBlZTRlYWIyOWU4NTFiODdlOGU3ZGQ2MDFlMmVjYzg3MjM1NTI1MjQxZjJlODU0ZGE5Y2IxNmFjMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0ZTQ3NmQ1ZmM3NDIxODkyYTNhOWFhYjFmNmNmMTUyOGExOTQwNmNiMTVlMDZlOWQ4MDIzOTc4MTQwMjNjMDIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L79-L109",
+          "version": "repo-lines-v1:sha256:a6cf0022dab40d9231e34d808476a689ee041e0b7ad699678fe6f28f5710d083:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWQ1NDk1ZmM5NTM0NGE2NzY5NDc0NzE1OWY3MzNkZjM0NTUxYzdiNDQ0ZjE1ZWE5MTNlMTYxY2JlYzFlNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjMjg2NzYzYmRmNzA2ZTlkMzU4N2JmYzRlZTVlMzkyYzY4MDVkZjI5YmU0NDdmODY0NTkwYzkzNTBkYjI3OWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NjM0ODEwZGU2ZjIwZjRlMTJlOTA0M2U3ODI0YmFlNzMzN2Q1OGRiZjA4ZWUwNjk5ODE2YzBmNzgxNzMxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmYTMwODlkMzI4OTFjYmQ4OGRhZjYyODI2NjU0ZDEzMjk3NDk4ZDA3MmIzMTRiOGY3MGY0MjZlZmI0NmRjMDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7d67b32b161a40ab82994d2b3cd65155",
+      "statement": "Prototype buy and sell operations persist through multiple independently committed helper calls rather than one atomic database transaction, and transaction ids are selected and incremented in application code.",
+      "evidence": [
+        {
+          "resource": "repo://doc3.py#L462-L505",
+          "version": "repo-lines-v1:sha256:a4594748958c397546008e385e930bbfcd4acfc9042bec4582e1c1f82f8aaabe:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1NmFmMWNhNDQ4MGRmMjdjNGEwMmUwMjA5NTM3MGZhZTJkNGZjMGNjMDI3Y2ZmOTBlYzU2ZmVmODA0MDA1NzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyN2VlNmMyYmJjZTQ2ZWQ1YjExMTM0ZDBkMDcyMzdkOTFjYTUxMGQ5YjQxMGI0MzVhMTgwMDgxMzdkZTY4ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyNTIzMjQxYzJlYWQxNTNhMjM1NWU0MzQyZmE3NDEwMmNmNzhlMDY4MDM3MTkwYmU0YzYzNzA1Y2EyNGMwNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY5ODk4OTM0Y2YxMWM3MzM3MTE3N2RmMDAyY2Y4Nzk2ZjllYmZjODQ1OGIzZGFkZWJmMjBmMjMwNTRjODdlMGIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L569-L627",
+          "version": "repo-lines-v1:sha256:f579db0c8d5e56c46bd5f0b5e4f11fdd8de61b6fcdb9f6e1c734fd25a143b406:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhYTE5NmJhYWYxZDRjMWI5NGIwY2Q4MWNiMjMwYWI2ZTdlZDc5ZjdkYjM1OGNiOWFiM2YxMzE3MzQ2Njk0OTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZDY2MDUxNDZhNzE1YmZiYjVkMDU2ZDFkZTFiNmEyY2Y1MGVmMzc1MDJiYTI4ZjI5MWRiNzJjMDMyZjhiYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3ZmI1NDJiZjhlMzgwYmQ4NmIzYTljYTNkZThhOTQzY2U0MTI2ODJiNzFjYWIwMGQ3ZTRlZmU3YzgwY2Y1M2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0ZGY5MmM1NTM1MzcyOWUwZmIwMzU2ZmFiMjNhNmUwOTc3NzViMWUzNzRkNTMzYjFhMTBmNGQ2NTMxODg5NzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e12e417c421a4bb9b7f58fb94bdf847c",
+      "statement": "The inspected repository contains no SQL schema, migration, or seed-data files and no focused database tests, so the prototype SQL is not enough to establish table definitions or bootstrap a compatible database.",
+      "evidence": [
+        {
+          "resource": "repo://src/README.md#L6-L18",
+          "version": "repo-lines-v1:sha256:65eb05c1c632635966b4339113f77a45e4bde4db28cf0f35966a90a0275f8081:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzZDc4ZjA2YzE0MDc0MzhmNTRkYjkzMzBjZjJmMWIwMDgyMjE0YzQwNDdkMDFmN2UyNzNmN2YzMTc3YjViMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMzI4YWU0NTUyY2UzYzEzZDA0YTNhMjA4NTc1ODI1NTUyNWZlMjc4NDdiOTM5ODgwMDNkYzE0ZmJhYjY1MjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkY2RmZDkwZTU1YjhjMTAxZDE2MzU3NWViZjM5OGExOWE2ZmFiMDkwYjFjZDg4NWRlODc0NjFlODAxZGExMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/database.py#L1-L21",
+          "version": "repo-lines-v1:sha256:76dd7be889d01aa06ae95f4ff524c7f3d59102bb03468691fbcfaf5c4ca17c8c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1M2VjMTVlOWE2ZmI2YzY0YzliZTFhMjUyMDE2NjdjNWJmZDhiZmRhOTM5NWQ5ZTgzYjczN2YyMzQxYjZmZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYzg2OWFlNmEwOWJjNzYwMmRkMjU1ZmI2MDJjY2I3OWUyZDZhOWI2MzBlZDM4MDk4YTVjMWIxMTkxYzQ4MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T08:50:35.037Z"
+  }
+}

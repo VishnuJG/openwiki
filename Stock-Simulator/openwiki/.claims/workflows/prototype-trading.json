@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c181966d9239017c00732a7ce596374d41c0e344b0d918a5f1c56f4039934282",
+  "claims": [
+    {
+      "id": "claim_2ba404eb6ef1477d8c5d09da49b59eaa",
+      "statement": "The root-level doc1.py, doc2.py, and doc3.py are independent Tkinter programs that directly use psycopg2, while the active src/app.py launches src/login.py's StockSimulator and its submit callback only prints entered credentials without connecting to PostgreSQL or invoking the prototypes.",
+      "evidence": [
+        {
+          "resource": "repo://doc1.py#L4-L5",
+          "version": "repo-lines-v1:sha256:7ce350f5fa1da75189eb7c0670b26fb190ce8e68b9ae1d18c91bfba922a48c35:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg2ZDRiYzRjZGEwNmE1MWViM2QzYjE3NjQzMGEwZWU2ODllZjc5NjQ1YWQ3NTRmMTQ2MjhiMGI5ZmJmYTJhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTUzOGMxNGU0MDRmMTlkYWRkOGQxZjQwZDMxNzllYTNjYzAxNjY4OWYyYjk3OTQ2YjZlZmYwNjhkZmQxMmVkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGFhYjk1ZGRiMmZlNzI4YWI1ZmZkMDEwZDc2OTBlOWE1MDVkNWZmMTg1ODdlMThmYTg0ZTBhZTc0ZTU4ZWM0NiJ9"
+        },
+        {
+          "resource": "repo://doc2.py#L41-L42",
+          "version": "repo-lines-v1:sha256:7ce350f5fa1da75189eb7c0670b26fb190ce8e68b9ae1d18c91bfba922a48c35:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg2ZDRiYzRjZGEwNmE1MWViM2QzYjE3NjQzMGEwZWU2ODllZjc5NjQ1YWQ3NTRmMTQ2MjhiMGI5ZmJmYTJhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWVhNTJkMjcyMzBiODljYTFiNzMyODY2YWZiZTEzN2E5OGU2NTEwMDA0OWE1NmIzMjkzZGVmOGQ1ZmU3ZGRhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk3YjIwOTUxZDdhZGQzNThmNDgwMDY0ZjM0Mjg2YjY5MTA5ZTY4MWM2MTRlNzg2OWFhMzhmZDBmN2E0YTdkNSJ9"
+        },
+        {
+          "resource": "repo://doc3.py#L39-L43",
+          "version": "repo-lines-v1:sha256:1bb2a7a6f5ab70f3fb95789b545f33415670bb594a23f9fa2df8872e1322b469:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg2ZDRiYzRjZGEwNmE1MWViM2QzYjE3NjQzMGEwZWU2ODllZjc5NjQ1YWQ3NTRmMTQ2MjhiMGI5ZmJmYTJhNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWUwMTEzYjc0OTE0ZDkwYzIyMjgwYjBlZjNiZDFiODg3NDBmOTRiYTVhMmJkNGQzZDUzYjNhOGVmMTlhOGUzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdhMmZmYjM3ZDMyNmI5MjY5MmM0OWU4N2U1NTJjNTY2YjQ1ODk3ZjNjOTNlMzg5Njk1NDAxNjQ0OGVjNWMzZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQ1NGM0YWQ2OTQ1YTFlZmQ1NjEzMDBmNDUwYmRkY2ZjZmQ1ZDNlYzg0MmEwNjdlN2M3ZjhlMmZkZmQ5MmZmNiJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L26-L31",
+          "version": "repo-lines-v1:sha256:bd1ddb37b2f9b646822e59190b0e27d288c26a892baa0c413b2c9bfb0acc97dc:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc5ODExZjM4YWM3YTMzNjkyM2QzZTRjYjlkMjAzZTEyYWJhNjAyYjdkNTE5OThlOWJlMGRiYThiZjg4NzFkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTYxYTdiNzU2MjQyZDk4MTQzYzE4ODMzYzYyN2ZjMmM0OGYwYTAyOTIxNjZhYTVlMjY0Zjc3NTNjYjRhYjhiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2Y2Yzc2Y2NhYzk3OWRjNjBiMTBiNGVjMzE5ZDJiMTc4ZDk4MDYyYWQ5MmZmYWJhMzkzOWJlYzU5YTAzODVlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5d1af5606b6540fbbae2521c94de04fc",
+      "statement": "doc1.py is a table-browsing prototype whose menu queries transactions, a_shares, and company using the entered values as PostgreSQL credentials; doc2.py and doc3.py instead query all account rows at login and use the first row's first field as the demat number, without demonstrating identity-to-row filtering.",
+      "evidence": [
+        {
+          "resource": "repo://doc1.py#L46-L51",
+          "version": "repo-lines-v1:sha256:9c4d83316c42755ccd8e79943b22adcac2e8d1b89c3567b980e360f4b3f397ce:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDY4NjUzYjhkOGUzZTYxNzAzYmNkZjFkM2E3OGI1NDJmM2UzMzU2YTgwZWNiYzE0N2VjNzBmYWRkYzFhYmI4MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGI2OWNiNmZiYzE0NDZhNWY1OGY0ZWZlZWMyMzkyMDM1ZGI2MWI3NjkyOWMxMmI0YThiMTI2MGRiZmJmMTVlNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWU3MDJiNGJjNDhhYzJkOWExNzY0MGY0ZTMzZTU1N2Y5ZWU2M2E4YmQwZDBlMWIyNWRjMmU4ZDFmNDA0MDM2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWM3MDhjZThjYWI0MTVmODZmODhkZmJjYjM2NGI3NWNlZTY0YWZiMWZhYTEzY2ZkMTQzNjY5NjgyMDA3ODVjNCJ9"
+        },
+        {
+          "resource": "repo://doc1.py#L61-L80",
+          "version": "repo-lines-v1:sha256:2d697979a6d15889913e4f931cf9d537f4dd287c43161d7d88ca2a88e6c9ca72:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MjQ5YmU3NzFhMGMwNWFmODUyYjk2OTUzYjY0YjMyOTUwNmM3NTRlOTU5ZGY1NTY3NTQ0ZGJjYjc5YzFiMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMWJhM2VmOWI0Y2MyZjhjNjY0YmQwODk2ZjA0ZjcyZGJjYTc2NGQ3MzYyZjM2NWJhYWFiNWIzY2RkYTc3N2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEwYmIxNzM3NjIxNWRlYjIyMzQ3MWJlZjQwZmRkZDdlM2EwMDE3M2YzZmRmZDdjNzUwNmQxMzcyNWY2MTM0MzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1YjMyMmVlOWE5M2RkOTk2YjdiYjFhYjU1YzJhNWQ0YmNmYzZkNjkyNjgxOTM0ZmMyOGQyMDFmYmUzMmNiYmQifQ"
+        },
+        {
+          "resource": "repo://doc2.py#L92-L116",
+          "version": "repo-lines-v1:sha256:a44c994b154014997c152813fb5f0f2e767e3dba7ddfb58ba4f740a9f6bd67a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2ODY1M2I4ZDhlM2U2MTcwM2JjZGYxZDNhNzhiNTQyZjNlMzM1NmE4MGVjYmMxNDdlYzcwZmFkZGMxYWJiODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwYzNlMGUwOTVjOGUwYjk2ZjMyOGI1NGRhN2U4OWE1YmYzODZjMjg4M2UyMDk0NzMyZTUwYzRhNThkMzk2ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ4ODc0ZGQ4ODBmMTk3YTRkYWRjNzI3ZTNhNzY1YzI2YzhjYTZjZTFlZDA3OGU3OWEwMDNiYTVhNDc2OTE0MWIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L51-L76",
+          "version": "repo-lines-v1:sha256:63b570b170e7a7ae61a65123fa87f8ace1a239a772fce72b6b59ca15578f8572:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzNGViODBjOGY4YzI4OTNmY2UxZGQzZjY1NGUxMzFjYzc3ZjU5NDc3YTQ0MjBhMDE5ZDIyNjJlMTZiNTljMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwYzNlMGUwOTVjOGUwYjk2ZjMyOGI1NGRhN2U4OWE1YmYzODZjMjg4M2UyMDk0NzMyZTUwYzRhNThkMzk2ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4YjNmMjE1YjgyMjk2YzI4ZGNlMmNlNTQxZGRjM2I0MzViM2Q1Zjk4MGZhNmI1NTRhZGNlYzA5MjMwYmY0MmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5MWUxZDA3NzI1ZTY2MDhjZjgxMzg0MjkyYjliYmEyODAzZTEzODQxMTRlYWZiYjI4YTQ5NWE5MjNlZmUwYWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3da251e829f445368e3958e7c23c347b",
+      "statement": "The doc2.py and doc3.py holdings view aggregates a_shares quantities against stored shares prices, then its afterlogin special case calculates transaction-derived average/profit values and updates account.profit; the variants differ in denominator handling and subtraction order.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L140-L142",
+          "version": "repo-lines-v1:sha256:6403af575a37fb66a07bdb6ba37f4fc4744247f182d6fb0ec051681b4d671c50:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI4YjQ5OWM5ZGZhNGM5Mzc4M2RjMWJlNDE2NDRjNWUzMmIxZmE3MDVkYmJhZGEwNmJmY2U5YWNhZDgxNmQ1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I3NDM3MWU4YjljYmUxYWZlZmNkNjczMmRiZGZiMjM5OTBmNWJlNGQ2ZjIyN2IzOTQ4ZjdlMTI3MmQ1ZjMxYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzBmZTM5OTgyMjMzYjY0ZjUxNzU5MzBkMmVmZjFkOTExNDUyNDJjMDZiYzViZGY3ZDNiMTNiODU5YWVhMjBmNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzAxYWZhNzIyNDZlYjE5ZjQwOTU0MzM2Y2FmNDNiZWQwYjU5NmJkOTJmYzM3NjRmMDYzNzFiNTNlNGJjN2M1ZiJ9"
+        },
+        {
+          "resource": "repo://doc2.py#L480-L500",
+          "version": "repo-lines-v1:sha256:7c83ddce36de09ed59b3f84afdf2d2c16c6205aa06d38061c645944fd0df8854:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwZjIzZjgyOTk1NThlYzc0NWNiOTZmOTgyMTkzOGQ0NzQzZTQ2N2Y0Yzg3YmM4NDMwOWU1NzBjNDk1M2M2MmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5YjM4ZmNlMjg2Y2MyZDFjNWU3ZjRhMzhkODk1NzJjMDBhMDcwNDQzZTFjZTJjNGI2OWY2MjUxYTRmYmY0OWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2ODIwMzU2M2U3OTI2OGIyZTQ1OTIxZTFmZjQyOTAwNWZlMDNjOWMzYzMzNGE2N2I4NTJlYWEwYzdhYTczNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0MTQ3MDMyNDY0NWUzNzJiODUwMGM5ZjQ4MzY2ZTI3OTk2MmFjY2I1ZmE5Y2MzODM4MTE2ZDUzNzcxMzFjYTYifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L243-L245",
+          "version": "repo-lines-v1:sha256:c8605507cfccd08323d80eb3294b00b554f9aa9540ba3079b72fcf4dd5538b25:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTI4YjQ5OWM5ZGZhNGM5Mzc4M2RjMWJlNDE2NDRjNWUzMmIxZmE3MDVkYmJhZGEwNmJmY2U5YWNhZDgxNmQ1ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I3NDM3MWU4YjljYmUxYWZlZmNkNjczMmRiZGZiMjM5OTBmNWJlNGQ2ZjIyN2IzOTQ4ZjdlMTI3MmQ1ZjMxYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzBmZTM5OTgyMjMzYjY0ZjUxNzU5MzBkMmVmZjFkOTExNDUyNDJjMDZiYzViZGY3ZDNiMTNiODU5YWVhMjBmNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzAxYWZhNzIyNDZlYjE5ZjQwOTU0MzM2Y2FmNDNiZWQwYjU5NmJkOTJmYzM3NjRmMDYzNzFiNTNlNGJjN2M1ZiJ9"
+        },
+        {
+          "resource": "repo://doc3.py#L646-L667",
+          "version": "repo-lines-v1:sha256:ff0d243cafcc972cca3868cee1d94168e74d6413a383ff96dfaa47bb42e8ab0e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhNmY3M2FlMWZkYTIyZDQ0MTc0MjFkMmNiNDEyYzE1OGQxMjA3NzEwZWNiNjY4MDI4YTE0MmJhODM2ZWU0YTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5YjM4ZmNlMjg2Y2MyZDFjNWU3ZjRhMzhkODk1NzJjMDBhMDcwNDQzZTFjZTJjNGI2OWY2MjUxYTRmYmY0OWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2ODIwMzU2M2U3OTI2OGIyZTQ1OTIxZTFmZjQyOTAwNWZlMDNjOWMzYzMzNGE2N2I4NTJlYWEwYzdhYTczNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0MTQ3MDMyNDY0NWUzNzJiODUwMGM5ZjQ4MzY2ZTI3OTk2MmFjY2I1ZmE5Y2MzODM4MTE2ZDUzNzcxMzFjYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a29000f2132f41508f4c4043331f953b",
+      "statement": "doc3.py account creation selects the largest existing demat number and increments it, inserts account and client rows, creates a PostgreSQL user, and grants the pre-existing clients role, with separate commits; a failure can leave partial setup and its finally path still reports success and returns to login.",
+      "evidence": [
+        {
+          "resource": "repo://doc3.py#L79-L123",
+          "version": "repo-lines-v1:sha256:c97eacde0d15349f243f09886b81d565cd676a8da23dcf3fb57f30a46fc7d607:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWQ1NDk1ZmM5NTM0NGE2NzY5NDc0NzE1OWY3MzNkZjM0NTUxYzdiNDQ0ZjE1ZWE5MTNlMTYxY2JlYzFlNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyNDEzOWZiYmQzYmEzZTAwMGEzYTk4YTZhZTdjOTVhNWFhMDNjNTU2MDc2M2IzNjg0Y2YwODk3ZTU3MTllMmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NjM0ODEwZGU2ZjIwZjRlMTJlOTA0M2U3ODI0YmFlNzMzN2Q1OGRiZjA4ZWUwNjk5ODE2YzBmNzgxNzMxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4YTI0Y2VmMGQxMWZlZGM4ZDg3YjMzZWIwZmQ1ODcyOWY4MWQ0ODdlMTA3MDIyOTY1MzBiYTg4MzJlM2RkMzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cb14d5917fa048a486d5183418342229",
+      "statement": "doc3.py wallet controls add or subtract the submitted amount from account.balance using interpolated SQL with no WHERE clause or visible positive-amount/withdrawal check, so the update is not explicitly limited to one account row.",
+      "evidence": [
+        {
+          "resource": "repo://doc3.py#L275-L293",
+          "version": "repo-lines-v1:sha256:232ca279a809fde0e6743b15409c95466f174a8feb2f58cb3fb2940c890fc629:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyNTYzNzkzNWNhYWRkNDYwNmUxOTk5ODk3YWJhNWZmYzQyODVhMjVhYTM2NWYzMWNkMTA2MzQ5NzcwYzM1NzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyYzk0N2Q4Y2FjMmVjZWExZjg3NGFmMTJhYTRhNzRmN2I5NGVlMTMwNTAwNzEzOTU0ZTQwODNkZGZjM2M1N2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiOWQxODI5ZTczNzIwMWQzYWU0MmZjMjIxYjYxNTI4ZWNjMzE5MWIzMDNhOTU0MjJiNDQyYTNlNDQ5MzcxN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNjZWFiZmY1OWVlY2RhYThiMmJlZjI0MTc3NjVkNTViMjYwYzk2ZGM5Mzc2MDlmNjMxMzE4ZTRmYjlmZTc4NzEifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L308-L329",
+          "version": "repo-lines-v1:sha256:d003adb722ad049bf3f5674b2cc3c05320b650436ea42346a950ea571dd7f737:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZTA1NjIyNGM5NGVkZDA2ODRiZWIzZWFjYjM1NDgxNGY2OTExMDkwMTU3MTUxOWIyOTY5MGYxYjA2Nzg4MjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZDY2MDUxNDZhNzE1YmZiYjVkMDU2ZDFkZTFiNmEyY2Y1MGVmMzc1MDJiYTI4ZjI5MWRiNzJjMDMyZjhiYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzNmIxODM3ZGU3NWI2MDJlYjkyMjUwN2U5ODgwMDZmMzU5MDM3NTFmNzI5MDU5MGM5NGM5Y2U3NWRjNGVmOGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae31f332c79b4740a4a4fe226543b1bf",
+      "statement": "In doc2.py and doc3.py, a buy reads stored price and available shares, checks the requested quantity against inventory and the computed cost against account balance, inserts a holdings row and a buy transaction, then separately updates share quantity and account totals.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L345-L419",
+          "version": "repo-lines-v1:sha256:e1b5dbf20583cac510f2e811ebebed0b3004492e96676a9238ccccdd1aa8c8f9:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzODk4NmE4NGMwYzIxYWZiYjk2NTdiZjA1MTBlOTY2ZDBhODg0YThlZDljZDMzZmUzODNjZTk0NmYxNGQ2NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwN2Q2Zjk3Njc4NTU2ODJhNDAxZTYxODRhNGVjZmIxMTY3NTZjYmU0ZjQ5MjZmM2VkODJkYjMyYmY3MTg3MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhMjY5NjgyNDA4YTQ2NzgxMzlhZjJhOThhYWMwZjkxMjlkZWY2Mzk2ZmJjZTJmOGNjNTA0NGU4ZmQ5YzNmNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5OTM2ODU0OTQzNzY4ZTI2OTk1MTMzN2Q4Yzc5ZmMyYWJlOWY4OGMxNGFkNzZlNmRjNWM1ZWY1MWQ2MjNkNDUifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L511-L585",
+          "version": "repo-lines-v1:sha256:e1b5dbf20583cac510f2e811ebebed0b3004492e96676a9238ccccdd1aa8c8f9:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzODk4NmE4NGMwYzIxYWZiYjk2NTdiZjA1MTBlOTY2ZDBhODg0YThlZDljZDMzZmUzODNjZTk0NmYxNGQ2NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwN2Q2Zjk3Njc4NTU2ODJhNDAxZTYxODRhNGVjZmIxMTY3NTZjYmU0ZjQ5MjZmM2VkODJkYjMyYmY3MTg3MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhMjY5NjgyNDA4YTQ2NzgxMzlhZjJhOThhYWMwZjkxMjlkZWY2Mzk2ZmJjZTJmOGNjNTA0NGU4ZmQ5YzNmNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5OTM2ODU0OTQzNzY4ZTI2OTk1MTMzN2Q4Yzc5ZmMyYWJlOWY4OGMxNGFkNzZlNmRjNWM1ZWY1MWQ2MjNkNDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_78c237b2ca904704800f57b5ba66fb79",
+      "statement": "Both larger prototypes' sell workflows check requested quantity against aggregated holdings, create a sell transaction, increase shares.quantity, credit account.balance, and reduce account.currentval; doc2.py leaves a_shares rows unchanged, whereas doc3.py decrements holding rows and deletes zero-quantity rows.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L269-L342",
+          "version": "repo-lines-v1:sha256:ae8b5be207f4ae06401e0413c3345c9139d7cdcdaa97879130fd9cdaea576818:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4YzIwMmE2NDFhNDdiYjRhYTNjYmQ4ZDY4NWFmNTZmYWRiMDk2YWI1OTcxMzRlYjJmZTM1NDcxY2Q2YzgwYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODRhMDA0YWI0NjYyYWU3NDJlZTc1MDFjNmQzNDgxYzI0NDE5MzMzNzgwMTU4NzhjZTk5NmJlYzA5MGU3MzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNzcwNzBkZjM1ZjQ5OWFhMmFhMzg1MTljZDRjNjViZjZlNTg0NTVlYjhjOTc0MmM1NTJlODM3ZWJkMDcwNDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlZTY3MzJiYTgyZDcxZGRlMjFjZjZiMjRlOTVmNTAwYWY0YWFlZjU5Y2EwODg2NjEwY2U1YjYwMDMyOWIxYTIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L429-L508",
+          "version": "repo-lines-v1:sha256:c6d374b67788e99a5236069c84ad98ee9a3ba769e7b42147cc7419bfc4ed2be0:eyJzZWxlY3RlZExpbmVDb3VudCI6ODAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4YzIwMmE2NDFhNDdiYjRhYTNjYmQ4ZDY4NWFmNTZmYWRiMDk2YWI1OTcxMzRlYjJmZTM1NDcxY2Q2YzgwYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODRhMDA0YWI0NjYyYWU3NDJlZTc1MDFjNmQzNDgxYzI0NDE5MzMzNzgwMTU4NzhjZTk5NmJlYzA5MGU3MzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNzcwNzBkZjM1ZjQ5OWFhMmFhMzg1MTljZDRjNjViZjZlNTg0NTVlYjhjOTc0MmM1NTJlODM3ZWJkMDcwNDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlZTY3MzJiYTgyZDcxZGRlMjFjZjZiMjRlOTVmNTAwYWY0YWFlZjU5Y2EwODg2NjEwY2U1YjYwMDMyOWIxYTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ecfc5961a6f44c7b326a75120e92f23",
+      "statement": "doc3.py sell updates a_shares by stock symbol without a demat-number predicate and deletes zero-quantity rows using the administrator connection, so these statements are not explicitly scoped to the selling account.",
+      "evidence": [
+        {
+          "resource": "repo://doc3.py#L494-L506",
+          "version": "repo-lines-v1:sha256:60f96f16a8af79874854f46bcefbfbb705434f1b371906fca07fe7b998f95dc1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NDA3Mzg5YTJkZGY3MmI5ZGUzZTExOWE2YWYzOWZjZWYzZWEwMjhmMWQ2NGUyZjM2MjhhN2I3M2EyZjQ3MjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDc0ZTI5MmQzZDEwNjY2NTRlMzUzOTMxOGE5MTQwNGM3YjllZmZlNGJlNmI1NGI5ZWY1OTQ1MWUyNGMwMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMWI1NzA1YjBiNmU4ZWFkMWVhNDA5ZWZmMmVhNWJiNWZiNGQ5MzBlZTQ5MDA0MTc1NmQ1YzUxNWI2YTJhYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyYTU3ZmUwZGMxMjE2MjVkNDA4OTk5YTM1MDBhNTYwOTIyYjEyYmM1NGM0MmRmMWViMTNhOGNjZWRiNWY3NDgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a160672f405342229996b1f0cd29bff6",
+      "statement": "The prototypes combine parameterized inserts with unsafe f-string SQL for account/client values, wallet amounts, and symbol-specific updates or queries, and use embedded administrator credentials in some paths; these are unsafe prototype patterns, not a production configuration model.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L246-L265",
+          "version": "repo-lines-v1:sha256:ee0e8a8f892442f40955f8f85508e58f8512e0150aa38c2ecbb17ec5246df693:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkNTYyMTUxODk5MDU3Y2NkNzA2NTJkNzQ2Mzg4MTY0MWExYWNhNDQ2N2RkNTQzM2YyMTE3ZGE2ZjBhZjY1MmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZDY2MDUxNDZhNzE1YmZiYjVkMDU2ZDFkZTFiNmEyY2Y1MGVmMzc1MDJiYTI4ZjI5MWRiNzJjMDMyZjhiYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNzcwNzBkZjM1ZjQ5OWFhMmFhMzg1MTljZDRjNjViZjZlNTg0NTVlYjhjOTc0MmM1NTJlODM3ZWJkMDcwNDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlNzcwNzBkZjM1ZjQ5OWFhMmFhMzg1MTljZDRjNjViZjZlNTg0NTVlYjhjOTc0MmM1NTJlODM3ZWJkMDcwNDEifQ"
+        },
+        {
+          "resource": "repo://doc2.py#L313-L340",
+          "version": "repo-lines-v1:sha256:a6d3897d43b92cdbeaab354df9a78736bdb84aa01987efae39562037d732bee1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YmE5YTNiOTE4OWE1YTMwNDY1YjViY2Y2N2ZhM2I3ZGE0MzgzNzdkZTEyNzM3NzEzNWI3NTYwYmQzMjkyNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNGUyMGY4OWZiNGZhMTAwMzkwYzIzOTVkM2Q2MGZmNjg2MWJhOTExZjhmMDhiODBhNGQ2MTEyZDA5MWQwNDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU0ZjYxNWJkMWMzNTlhN2VjNDBjOTM3MDc0OTRmMzE0N2NiZjQ4NDZhMGRlMmExNGNmZjg3NTM2OGU3NmVhODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyYTU3ZmUwZGMxMjE2MjVkNDA4OTk5YTM1MDBhNTYwOTIyYjEyYmM1NGM0MmRmMWViMTNhOGNjZWRiNWY3NDgifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L308-L329",
+          "version": "repo-lines-v1:sha256:d003adb722ad049bf3f5674b2cc3c05320b650436ea42346a950ea571dd7f737:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZTA1NjIyNGM5NGVkZDA2ODRiZWIzZWFjYjM1NDgxNGY2OTExMDkwMTU3MTUxOWIyOTY5MGYxYjA2Nzg4MjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZDY2MDUxNDZhNzE1YmZiYjVkMDU2ZDFkZTFiNmEyY2Y1MGVmMzc1MDJiYTI4ZjI5MWRiNzJjMDMyZjhiYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzNmIxODM3ZGU3NWI2MDJlYjkyMjUwN2U5ODgwMDZmMzU5MDM3NTFmNzI5MDU5MGM5NGM5Y2U3NWRjNGVmOGQifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L492-L506",
+          "version": "repo-lines-v1:sha256:f5a77687d3a8d4c97ec43874545290a4b9ee4447ce0a17a59bf851c3599efac9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzMGFlYjQ4MjAzZDIzYjE2MjlhZDA4N2YzYzU1MWM3NTU1MWFjYjVkZDc0ZDdhNDFiMDM3ZDA5Y2VlZTM2NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyZDc0ZTI5MmQzZDEwNjY2NTRlMzUzOTMxOGE5MTQwNGM3YjllZmZlNGJlNmI1NGI5ZWY1OTQ1MWUyNGMwMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3Zjc2ZTBkZTRkZGU5MDA2Nzk2OWE3NTQwZWYwOGQ4MTMzYjZjM2IzZTYxMGFjYzRmYWFiYjZkYzkyYmE4ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyYTU3ZmUwZGMxMjE2MjVkNDA4OTk5YTM1MDBhNTYwOTIyYjEyYmM1NGM0MmRmMWViMTNhOGNjZWRiNWY3NDgifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L609-L627",
+          "version": "repo-lines-v1:sha256:42ac87ce53bc9dc3d5497517dd81e43147698524b2e1a71a6c0dd47b5993b066:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0N2ViMGIyY2Y5MzA4MzUxNWQwODRmN2QzMjk3ZDQ2YzJmZWQzNjA1ZTIyMTJhYjViNmYyYzhkOWIzNTRjOWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZDY2MDUxNDZhNzE1YmZiYjVkMDU2ZDFkZTFiNmEyY2Y1MGVmMzc1MDJiYTI4ZjI5MWRiNzJjMDMyZjhiYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MGYyNzMxZDRiNTdkYTM2MGYyNTU0NDEwMzU4MTA1ZDc0NDgyNmM4OTY2YjlmOWQyYmFmMWM1YTNiNDkxNWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0ZGY5MmM1NTM1MzcyOWUwZmIwMzU2ZmFiMjNhNmUwOTc3NzViMWUzNzRkNTMzYjFhMTBmNGQ2NTMxODg5NzYifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L79-L109",
+          "version": "repo-lines-v1:sha256:a6cf0022dab40d9231e34d808476a689ee041e0b7ad699678fe6f28f5710d083:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWQ1NDk1ZmM5NTM0NGE2NzY5NDc0NzE1OWY3MzNkZjM0NTUxYzdiNDQ0ZjE1ZWE5MTNlMTYxY2JlYzFlNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjMjg2NzYzYmRmNzA2ZTlkMzU4N2JmYzRlZTVlMzkyYzY4MDVkZjI5YmU0NDdmODY0NTkwYzkzNTBkYjI3OWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3NjM0ODEwZGU2ZjIwZjRlMTJlOTA0M2U3ODI0YmFlNzMzN2Q1OGRiZjA4ZWUwNjk5ODE2YzBmNzgxNzMxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmYTMwODlkMzI4OTFjYmQ4OGRhZjYyODI2NjU0ZDEzMjk3NDk4ZDA3MmIzMTRiOGY3MGY0MjZlZmI0NmRjMDMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a051d472cac84301ba7b88803b68f9b1",
+      "statement": "Trade inserts and updates are committed by separate helper calls and connections rather than one transaction, so later failures can leave partial trade state; transaction ids are also selected and incremented in application code instead of using a repository-defined sequence.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L302-L342",
+          "version": "repo-lines-v1:sha256:8aaf38693cdeac149e42b52b81ff16213570f64ccf5e6c8242fff67da25a5fde:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1NmFmMWNhNDQ4MGRmMjdjNGEwMmUwMjA5NTM3MGZhZTJkNGZjMGNjMDI3Y2ZmOTBlYzU2ZmVmODA0MDA1NzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODRhMDA0YWI0NjYyYWU3NDJlZTc1MDFjNmQzNDgxYzI0NDE5MzMzNzgwMTU4NzhjZTk5NmJlYzA5MGU3MzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyNTIzMjQxYzJlYWQxNTNhMjM1NWU0MzQyZmE3NDEwMmNmNzhlMDY4MDM3MTkwYmU0YzYzNzA1Y2EyNGMwNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlZTY3MzJiYTgyZDcxZGRlMjFjZjZiMjRlOTVmNTAwYWY0YWFlZjU5Y2EwODg2NjEwY2U1YjYwMDMyOWIxYTIifQ"
+        },
+        {
+          "resource": "repo://doc2.py#L422-L462",
+          "version": "repo-lines-v1:sha256:3aa21d8a07892c09c15709f74662593bd0389a1d70da8d54f17563eade7fb289:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzNjhiMjcyNTU2ZTA2ZTNhMzA1MzQ2MTYxMDRmYmI5YjkyYjIzMzI2ZTZkNjM0Yzg0MzViZDM1OGYzNDFiNTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4NTY4YmIxYTM2NWRlMjVlYTQyZWRjODBkODlkY2I0NDJjMGZjZjkyNWM2NmE5MTE4MjVmMTgwNzE1YjJkZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0ZTE5MGU1NGM1ODgwNzVlNWQyYzlmOWEzZGFiMDU1NWI3ZjQwNWM0MGQ2NDc0YzYzNzEzZjc3ZDRhYzUyNzQifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L405-L426",
+          "version": "repo-lines-v1:sha256:3a8e79571f66f73ece6ef0162447bad9a58a953c48f1b29bcb645c9b70f8a6e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkNTYyMTUxODk5MDU3Y2NkNzA2NTJkNzQ2Mzg4MTY0MWExYWNhNDQ2N2RkNTQzM2YyMTE3ZGE2ZjBhZjY1MmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZGE3ZGM0ZGNlOGEzOWFhMjZlYWNiMjY5NzVmNGU4ZTI5ODM3MDVhODkwNzk2YWVmY2FkMGM2MzAyYWIzZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNzcwNzBkZjM1ZjQ5OWFhMmFhMzg1MTljZDRjNjViZjZlNTg0NTVlYjhjOTc0MmM1NTJlODM3ZWJkMDcwNDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2ZGJiNGVhMmYyMjAyMGE5MWQwM2ExMmU5ZDA0ZDk4ZDQ4ZTlkZjQ0NDBmM2MxNTQ2YjcxNTgyZDMwOTgyMjMifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L462-L508",
+          "version": "repo-lines-v1:sha256:5b645a19769ece2bf0aa90b32435f68874d140cb4aff3c83b7271bf795488670:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1NmFmMWNhNDQ4MGRmMjdjNGEwMmUwMjA5NTM3MGZhZTJkNGZjMGNjMDI3Y2ZmOTBlYzU2ZmVmODA0MDA1NzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwODRhMDA0YWI0NjYyYWU3NDJlZTc1MDFjNmQzNDgxYzI0NDE5MzMzNzgwMTU4NzhjZTk5NmJlYzA5MGU3MzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyNTIzMjQxYzJlYWQxNTNhMjM1NWU0MzQyZmE3NDEwMmNmNzhlMDY4MDM3MTkwYmU0YzYzNzA1Y2EyNGMwNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlZTY3MzJiYTgyZDcxZGRlMjFjZjZiMjRlOTVmNTAwYWY0YWFlZjU5Y2EwODg2NjEwY2U1YjYwMDMyOWIxYTIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L588-L628",
+          "version": "repo-lines-v1:sha256:3aa21d8a07892c09c15709f74662593bd0389a1d70da8d54f17563eade7fb289:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzNjhiMjcyNTU2ZTA2ZTNhMzA1MzQ2MTYxMDRmYmI5YjkyYjIzMzI2ZTZkNjM0Yzg0MzViZDM1OGYzNDFiNTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4NTY4YmIxYTM2NWRlMjVlYTQyZWRjODBkODlkY2I0NDJjMGZjZjkyNWM2NmE5MTE4MjVmMTgwNzE1YjJkZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0ZTE5MGU1NGM1ODgwNzVlNWQyYzlmOWEzZGFiMDU1NWI3ZjQwNWM0MGQ2NDc0YzYzNzEzZjc3ZDRhYzUyNzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_380043f40eda4a7186d14e953ee4d308",
+      "statement": "The NSE quote-refresh sketch in doc2.py and doc3.py is commented out; their active trading workflows read price and available quantity from the PostgreSQL shares table.",
+      "evidence": [
+        {
+          "resource": "repo://doc2.py#L345-L360",
+          "version": "repo-lines-v1:sha256:59f56f3d794bffc8914edb9f9a06a361f2bdda8358c49b6230452270fec18776:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzODk4NmE4NGMwYzIxYWZiYjk2NTdiZjA1MTBlOTY2ZDBhODg0YThlZDljZDMzZmUzODNjZTk0NmYxNGQ2NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1YTkyNDZjNjcxMjMxNWJhYTk0YWJlZGExMjVlZTYwYWE2MzUzNWFiNjViZDc1MmM3N2Y3ZDU1YjMzNGRjNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhMjY5NjgyNDA4YTQ2NzgxMzlhZjJhOThhYWMwZjkxMjlkZWY2Mzk2ZmJjZTJmOGNjNTA0NGU4ZmQ5YzNmNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmYTMwODlkMzI4OTFjYmQ4OGRhZjYyODI2NjU0ZDEzMjk3NDk4ZDA3MmIzMTRiOGY3MGY0MjZlZmI0NmRjMDMifQ"
+        },
+        {
+          "resource": "repo://doc2.py#L9-L34",
+          "version": "repo-lines-v1:sha256:254e90901c820450676db92775f6a946db6759f3a694137e39dd0a16bf4950fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwZjBkMDMxZmJkZjQ4NjQzMWEzNzRjNWFmYTg3Mzc5ZmI3ZjI4NjNiZTUwYTY0ZWFkZTUwY2RjNzRmNjY5MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmZTVlNjM3YTM2OGM4YjZmZmJhMDBiMmY3Y2EzMmVmMmVmNTZlMzQwYmVlNjdkMzEyYTM2ZGRmNDAxODczMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJkMWQxZDc4YTdiZWIyOTY3MmQwZjhjNmVlMGMwYjU3MjU2MWM0NGUxMDgzM2M1M2Y4ZGFlMWM2YjhkNGYyOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFlYTUyZDI3MjMwYjg5Y2ExYjczMjg2NmFmYmUxMzdhOThlNjUxMDAwNDlhNTZiMzI5M2RlZjhkNWZlN2RkYTAifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L11-L36",
+          "version": "repo-lines-v1:sha256:3bce1879ab1b2d1af4f0cef4ec68344631549a5da4de71b361a7e62f499f6d14:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwZjBkMDMxZmJkZjQ4NjQzMWEzNzRjNWFmYTg3Mzc5ZmI3ZjI4NjNiZTUwYTY0ZWFkZTUwY2RjNzRmNjY5MzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmZTVlNjM3YTM2OGM4YjZmZmJhMDBiMmY3Y2EzMmVmMmVmNTZlMzQwYmVlNjdkMzEyYTM2ZGRmNDAxODczMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJjMzA1MGU5NDUyZjM0ZmQ3NTMxMDJkOTg4N2UxMWIzMzhjOWRhMGJkOTczZjI4ZDc5MzcxZGMwYTYxYzliNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmNzhjZGU2YTFkNTk5MDY3ZjRhMGViODQ5MWFlMDgxZWNiYzU1NDk2NmQ0MTc4OWE1M2RmNTZjZmQyNzhjNDIifQ"
+        },
+        {
+          "resource": "repo://doc3.py#L511-L526",
+          "version": "repo-lines-v1:sha256:59f56f3d794bffc8914edb9f9a06a361f2bdda8358c49b6230452270fec18776:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzODk4NmE4NGMwYzIxYWZiYjk2NTdiZjA1MTBlOTY2ZDBhODg0YThlZDljZDMzZmUzODNjZTk0NmYxNGQ2NGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1YTkyNDZjNjcxMjMxNWJhYTk0YWJlZGExMjVlZTYwYWE2MzUzNWFiNjViZDc1MmM3N2Y3ZDU1YjMzNGRjNjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhMjY5NjgyNDA4YTQ2NzgxMzlhZjJhOThhYWMwZjkxMjlkZWY2Mzk2ZmJjZTJmOGNjNTA0NGU4ZmQ5YzNmNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmYTMwODlkMzI4OTFjYmQ4OGRhZjYyODI2NjU0ZDEzMjk3NDk4ZDA3MmIzMTRiOGY3MGY0MjZlZmI0NmRjMDMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T08:50:35.037Z"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/ownership.md": {
+      "pageVersion": "sha256:3ec8dc726c3fd05e792b1042ae67e3d0f6968f912796f912f421cb940576ecd4",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/integrations/postgresql.md": {
+      "pageVersion": "sha256:efe88a3043417d5b1aaf6516c4afe82e9b5bfb799f21680ad4de3af51c898a14",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/operations/local-runtime.md": {
+      "pageVersion": "sha256:f54413718a4ab08fe5d181656662fca1dd7ea21befa6d11a90bec56f2408d524",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:c5349ee842a66ba4e5cc22349dba688f0c3990923a85d80a01021c95aaea95f1",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/security/auth-and-secrets.md": {
+      "pageVersion": "sha256:34fcbc84f5584bab0862630e068374bd0b44f23535531a4539e6a2b7318e4ba7",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/testing/validation.md": {
+      "pageVersion": "sha256:616b34ce1e94b5287c0ee18e313b5acd813851c653c84d769eafa0f15fcb7e65",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/workflows/current-login.md": {
+      "pageVersion": "sha256:dd0e05df7ed3c9c532c204d1229d10564bcddd5d47789a8e3aa8f1a3b0fe0841",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    },
+    "/openwiki/workflows/prototype-trading.md": {
+      "pageVersion": "sha256:c181966d9239017c00732a7ce596374d41c0e344b0d918a5f1c56f4039934282",
+      "completedBy": "openwiki/0.7.2",
+      "completedRunId": "bc241cb8-c96a-44f9-baba-6d9670d23fb8",
+      "gitHead": "c98d2ce7d07ff604e936c266f429e5d00723fd28",
+      "sourceFingerprint": "sha256:4a81b0bc2e5d9f60cd6c381eb86122c04265ec15707465447c19c0f635f62ffd"
+    }
+  }
+}

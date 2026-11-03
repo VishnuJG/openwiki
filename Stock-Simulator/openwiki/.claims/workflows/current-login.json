@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:dd0e05df7ed3c9c532c204d1229d10564bcddd5d47789a8e3aa8f1a3b0fe0841",
+  "claims": [
+    {
+      "id": "claim_542001063ee04ad38530184cae8c87b0",
+      "statement": "When `src/app.py` is executed as the main script, it creates a Tkinter root, constructs `StockSimulator` with that root, and starts Tkinter's event loop; `src/login.py` also has an independent main-guarded path that starts the same UI directly.",
+      "evidence": [
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L32-L35",
+          "version": "repo-lines-v1:sha256:7ac93481d2175f0d8cb5d5b1aded2ddaf4ce09f0a9defffb6acd6eb20ea69f64:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZkZjFhMjYxMjFjMGNhMWY1YzZhMGRhMGYyNjU1MTM1OTkyY2VlNWQ5MzQzMTM1ZjNmNWY1MTQ3N2E0NDFlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTE5ZjlmOGY2NWFlZTlhMjYzOGJkYjkzOWVmZDc5M2Q5MDMxYTYyZDgwY2FhNDkxZjdhZjcwZWViMTUxYWZiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_db52d700613b4428ac312f39aaea86ca",
+      "statement": "`StockSimulator` configures the supplied root and creates an email/password form backed by `StringVar` instances; the password entry masks its on-screen text, and the Submit button is bound to `self.login`.",
+      "evidence": [
+        {
+          "resource": "repo://src/login.py#L5-L24",
+          "version": "repo-lines-v1:sha256:8d11bc88c4a4c99d807bd80e93954538ff75773c62693e7f8c67432be2f63979:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZmU4NTY4NDg5ZDZlOGU3MDU4YjI0NzViYTYzZDRlMGQwZGQyMThjMzZiYzE5MmYxMjEzYmY2N2RhY2M1ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMTcwN2RjYTdlYzc2ZTY5MzkwNDBmYWM5NmM3Zjk5YmY5OTM5YzY1YzliM2Y1MDgxODFhYjkyNDBiMTU1YjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1M2RlNzNmYWY1ZDUwZjA3YzU0Y2M5M2U4MzMzYmRjZDhhYzg4ZjgyNDQ2YTA3ODA1ZDA5ZmMzYTFhMzBmNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNzBlNTg3OTMzNTQyOWRhMjI4ODIxNzRmY2M4NjM4MzVmNDI0ZDM1MDc1MmY2YmM3OWExNWE3ODU3MTljNzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_13a8cbbd478b4a61ac2ad76655ebc679",
+      "statement": "The active `login()` callback reads the current email and password field values and prints both in a formatted line, so submitting the form exposes the entered credentials in standard output rather than performing authentication.",
+      "evidence": [
+        {
+          "resource": "repo://src/login.py#L24-L30",
+          "version": "repo-lines-v1:sha256:09b7332f3f7253740022989dbb63fcf827be9bf45dc63840b31393acb454e71f:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTIxNzA3ZGNhN2VjNzZlNjkzOTA0MGZhYzk2YzdmOTliZjk5MzljNjVjOWIzZjUwODE4MWFiOTI0MGIxNTViMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFhNzMzYWE5NTAwODMxMTYwOWVlMTk4NjU5MTIwYWZmZGZiNDFmNjU5MjBkNDI0MjM5YzY1NWM4YjE4YmEyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDM0MWZhYzg4MDQ4MTY0YjMzNTY1NjYyYmVjY2Y3MmM2ZTA1OGQ0ODdiZjRiZDg5Y2UxMzFjNDViMWE1ODlmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQyNGNhODEyM2ZiYjViZWQ3ZmIzMTNhM2FjY2FkMjdiZjE2ZTFiNGE1MGMwMGVmMjAyYmIzODc3MTZiNTM4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_de55aeead05a47c69760d72908af609d",
+      "statement": "Although `src/login.py` imports `psycopg2`, neither the active launcher nor the login callback imports or invokes the separate `Database` helper; the current submit path makes no database connection or query.",
+      "evidence": [
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/database.py#L1-L21",
+          "version": "repo-lines-v1:sha256:76dd7be889d01aa06ae95f4ff524c7f3d59102bb03468691fbcfaf5c4ca17c8c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1M2VjMTVlOWE2ZmI2YzY0YzliZTFhMjUyMDE2NjdjNWJmZDhiZmRhOTM5NWQ5ZTgzYjczN2YyMzQxYjZmZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYzg2OWFlNmEwOWJjNzYwMmRkMjU1ZmI2MDJjY2I3OWUyZDZhOWI2MzBlZDM4MDk4YTVjMWIxMTkxYzQ4MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/login.py#L1-L3",
+          "version": "repo-lines-v1:sha256:b4dede6866472e12a70421473d5d0589a471c677ee07f51230de941f3bcbdcaf:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ4MjdhOGE4MWYzZDc2MmNhYjI4MjVlMDc3MTJmY2ViMGUxODAwMTEzOGYyZjEyMTU0ZWU4YjQwNDNlYmFiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWIzZDYxNjVmMmYyZGZjYzU3MTZjOTY2ZmQ2MTVjYWNmNGY4N2NmZDFhMzVjM2JlMThlNDc1YWI3YjhiNjQ3ZiJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L26-L30",
+          "version": "repo-lines-v1:sha256:1f980d0acd57478940984f869c3d4d62c45be14673ac336778eed185cec4ba7e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc5ODExZjM4YWM3YTMzNjkyM2QzZTRjYjlkMjAzZTEyYWJhNjAyYjdkNTE5OThlOWJlMGRiYThiZjg4NzFkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFhNzMzYWE5NTAwODMxMTYwOWVlMTk4NjU5MTIwYWZmZGZiNDFmNjU5MjBkNDI0MjM5YzY1NWM4YjE4YmEyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTYxYTdiNzU2MjQyZDk4MTQzYzE4ODMzYzYyN2ZjMmM0OGYwYTAyOTIxNjZhYTVlMjY0Zjc3NTNjYjRhYjhiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQyNGNhODEyM2ZiYjViZWQ3ZmIzMTNhM2FjY2FkMjdiZjE2ZTFiNGE1MGMwMGVmMjAyYmIzODc3MTZiNTM4NCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T08:50:35.037Z"
+  }
+}

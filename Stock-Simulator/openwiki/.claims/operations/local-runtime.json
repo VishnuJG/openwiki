@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f54413718a4ab08fe5d181656662fca1dd7ea21befa6d11a90bec56f2408d524",
+  "claims": [
+    {
+      "id": "claim_56e860c820d54a3fbdaaaa3d10391d36",
+      "statement": "The documented local application path launches `app.py` with Python 3 and the README-listed `psycopg2` and `tkinter` dependencies; `src/app.py` creates the Tk root, instantiates `StockSimulator`, and starts the event loop, so its top-level `login` import requires running with `src/` on the module search path.",
+      "evidence": [
+        {
+          "resource": "repo://src/README.md#L12-L18",
+          "version": "repo-lines-v1:sha256:c84fdfd5e839c28ec9b91269abc59b7ef7f593c99440b9c5d1fc70d1cda38b86:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg0MTZmMTg2M2NlNTI5MGYwZjQxZmE1MzNmYjllMTBmZWY1ZDQwNWMxMzAwYzAzZTI3NmEwYTg5NDM4MmI2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGEzMjhhZTQ1NTJjZTNjMTNkMDRhM2EyMDg1NzU4MjU1NTI1ZmUyNzg0N2I5Mzk4ODAwM2RjMTRmYmFiNjUyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxMTFmODY0NThlZTdiZGE0YzhmMDQ1NjNkYjc1MmNjOTg0ZWJmZGVkZDkxMWFmZDFkOTg2ZTIyNzA2ZmUwYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_484817e6225b4a678da0f628f6256850",
+      "statement": "The active UI imports `psycopg2` when `src/login.py` loads, but submitting the login form only reads the email and password and prints them; the active `app.py`/`login.py` path does not construct the separate `Database` helper or authenticate against PostgreSQL.",
+      "evidence": [
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/database.py#L4-L7",
+          "version": "repo-lines-v1:sha256:24b24a39abfc618d0c8e5e6d586bfc775d6543443fbc71d54d746c69e291652b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ1OTZlYzVjYzY2ODQ4ZDNjOGRiOGRjYzYyYzBmMzJlMjcyODk4MjgzZDA0NzUzYjdmMmUxOGY5YzMyNmNkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgzMzA3ODU0ZDA1OGE2OTE0YjkxMjZmNzZiMzYzY2M3OGQ5N2YzMzIxOTcxNTE4NjlkOGQ2ZDgwNjI5Yjc0NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI3MjFhOGM4OTUyMWUzZGI4ZWI3MzZkNmIxMzBjYTYxN2QzZjkxMWRhNzAwNGFhNWFkMzNjOGUyZTRmODAwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRmNzk4MjgyNGRlNzRiY2Q0YWZkMmY2ZTQwZDFhMGI4NzNiNTg0MTMzMWJiZWI1ZTM1NmY1NjMzZmY0M2U4ZiJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L1-L3",
+          "version": "repo-lines-v1:sha256:b4dede6866472e12a70421473d5d0589a471c677ee07f51230de941f3bcbdcaf:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ4MjdhOGE4MWYzZDc2MmNhYjI4MjVlMDc3MTJmY2ViMGUxODAwMTEzOGYyZjEyMTU0ZWU4YjQwNDNlYmFiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWIzZDYxNjVmMmYyZGZjYzU3MTZjOTY2ZmQ2MTVjYWNmNGY4N2NmZDFhMzVjM2JlMThlNDc1YWI3YjhiNjQ3ZiJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L26-L30",
+          "version": "repo-lines-v1:sha256:1f980d0acd57478940984f869c3d4d62c45be14673ac336778eed185cec4ba7e:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc5ODExZjM4YWM3YTMzNjkyM2QzZTRjYjlkMjAzZTEyYWJhNjAyYjdkNTE5OThlOWJlMGRiYThiZjg4NzFkMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFhNzMzYWE5NTAwODMxMTYwOWVlMTk4NjU5MTIwYWZmZGZiNDFmNjU5MjBkNDI0MjM5YzY1NWM4YjE4YmEyNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTYxYTdiNzU2MjQyZDk4MTQzYzE4ODMzYzYyN2ZjMmM0OGYwYTAyOTIxNjZhYTVlMjY0Zjc3NTNjYjRhYjhiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQyNGNhODEyM2ZiYjViZWQ3ZmIzMTNhM2FjY2FkMjdiZjE2ZTFiNGE1MGMwMGVmMjAyYmIzODc3MTZiNTM4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_070e2c2662254e568d4b98625efb42fa",
+      "statement": "`Database` requires caller-supplied PostgreSQL user and password, defaults host to `127.0.0.1`, port to `5432`, and database to `stocksdb2`, and connects immediately; the wrapper has no environment-variable lookup, so these are code defaults rather than evidence of a configured database.",
+      "evidence": [
+        {
+          "resource": "repo://src/database.py#L4-L7",
+          "version": "repo-lines-v1:sha256:24b24a39abfc618d0c8e5e6d586bfc775d6543443fbc71d54d746c69e291652b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ1OTZlYzVjYzY2ODQ4ZDNjOGRiOGRjYzYyYzBmMzJlMjcyODk4MjgzZDA0NzUzYjdmMmUxOGY5YzMyNmNkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgzMzA3ODU0ZDA1OGE2OTE0YjkxMjZmNzZiMzYzY2M3OGQ5N2YzMzIxOTcxNTE4NjlkOGQ2ZDgwNjI5Yjc0NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI3MjFhOGM4OTUyMWUzZGI4ZWI3MzZkNmIxMzBjYTYxN2QzZjkxMWRhNzAwNGFhNWFkMzNjOGUyZTRmODAwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRmNzk4MjgyNGRlNzRiY2Q0YWZkMmY2ZTQwZDFhMGI4NzNiNTg0MTMzMWJiZWI1ZTM1NmY1NjMzZmY0M2U4ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f37d02c968d94079a20e443d772a740c",
+      "statement": "The PostgreSQL helper executes each query on its stored cursor and commits after successful execution, returns the current cursor result through `fetch_all()`, and closes its cursor and connection through `close()`; it does not catch driver exceptions or provide an explicit rollback path.",
+      "evidence": [
+        {
+          "resource": "repo://src/database.py#L9-L21",
+          "version": "repo-lines-v1:sha256:30fc458dcd557483f3726c110f5df78f637068f0d312a04ae650dd1a888649a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmYzUzNTAxYzY3OWJjMGMxODU5MWU4MDFkY2EwMjA4YmMwNGYzOWMzNWZjZWM2M2VhZjQ0NDJmMjE4ZjI2M2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYzg2OWFlNmEwOWJjNzYwMmRkMjU1ZmI2MDJjY2I3OWUyZDZhOWI2MzBlZDM4MDk4YTVjMWIxMTkxYzQ4MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc1ZGJlOTI3ODg2ZWNhYmU1NWU1MWExODQ3NjI2ODVlOWFiNDdkM2QxMDgwNTkyOWExYzRhOTRkNjQ4ZTc2MWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7d49b591752c45179672327f1587e89a",
+      "statement": "The repository's local-runtime evidence does not specify dependency versions or installation steps, a deployment shape, health checks, database provisioning, or a runtime configuration interface; the source README only identifies dependencies and says to run `app.py`.",
+      "evidence": [
+        {
+          "resource": "repo://src/README.md#L12-L18",
+          "version": "repo-lines-v1:sha256:c84fdfd5e839c28ec9b91269abc59b7ef7f593c99440b9c5d1fc70d1cda38b86:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg0MTZmMTg2M2NlNTI5MGYwZjQxZmE1MzNmYjllMTBmZWY1ZDQwNWMxMzAwYzAzZTI3NmEwYTg5NDM4MmI2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGEzMjhhZTQ1NTJjZTNjMTNkMDRhM2EyMDg1NzU4MjU1NTI1ZmUyNzg0N2I5Mzk4ODAwM2RjMTRmYmFiNjUyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxMTFmODY0NThlZTdiZGE0YzhmMDQ1NjNkYjc1MmNjOTg0ZWJmZGVkZDkxMWFmZDFkOTg2ZTIyNzA2ZmUwYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L4-L7",
+          "version": "repo-lines-v1:sha256:7ac93481d2175f0d8cb5d5b1aded2ddaf4ce09f0a9defffb6acd6eb20ea69f64:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZkZjFhMjYxMjFjMGNhMWY1YzZhMGRhMGYyNjU1MTM1OTkyY2VlNWQ5MzQzMTM1ZjNmNWY1MTQ3N2E0NDFlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmY5YjA1ZGRmYjMwNTBhODNkNmQwNGUyMjVlNjMwY2E3MmQ0M2RkOTQ5Zjk4NmZkOTkxMjM0ZWQ4MmI2MDVjNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/database.py#L4-L7",
+          "version": "repo-lines-v1:sha256:24b24a39abfc618d0c8e5e6d586bfc775d6543443fbc71d54d746c69e291652b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ1OTZlYzVjYzY2ODQ4ZDNjOGRiOGRjYzYyYzBmMzJlMjcyODk4MjgzZDA0NzUzYjdmMmUxOGY5YzMyNmNkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgzMzA3ODU0ZDA1OGE2OTE0YjkxMjZmNzZiMzYzY2M3OGQ5N2YzMzIxOTcxNTE4NjlkOGQ2ZDgwNjI5Yjc0NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI3MjFhOGM4OTUyMWUzZGI4ZWI3MzZkNmIxMzBjYTYxN2QzZjkxMWRhNzAwNGFhNWFkMzNjOGUyZTRmODAwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjRmNzk4MjgyNGRlNzRiY2Q0YWZkMmY2ZTQwZDFhMGI4NzNiNTg0MTMzMWJiZWI1ZTM1NmY1NjMzZmY0M2U4ZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T08:50:35.037Z"
+  }
+}

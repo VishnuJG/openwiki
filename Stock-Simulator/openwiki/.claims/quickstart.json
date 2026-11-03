@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c5349ee842a66ba4e5cc22349dba688f0c3990923a85d80a01021c95aaea95f1",
+  "claims": [
+    {
+      "id": "claim_6dd947973e944e5c9958ef802a949910",
+      "statement": "The supported active UI startup is `src/app.py`: when run as a script it creates a Tk root, constructs `StockSimulator`, and enters Tkinter's main loop; the simulator constructor builds the login frame.",
+      "evidence": [
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L5-L14",
+          "version": "repo-lines-v1:sha256:3cf330626792693b90228e6dbf696a240e6e1b950f6ec5b160b155d438775c56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwZmU4NTY4NDg5ZDZlOGU3MDU4YjI0NzViYTYzZDRlMGQwZGQyMThjMzZiYzE5MmYxMjEzYmY2N2RhY2M1ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5OTcyMGJhZjNmOWNkYTI2MTQxMDExODNiOWZmY2Y0MjVmYjc4NDdlNTczMTczMmYzYzRkM2ViMDM1NWYzMWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1M2RlNzNmYWY1ZDUwZjA3YzU0Y2M5M2U4MzMzYmRjZDhhYzg4ZjgyNDQ2YTA3ODA1ZDA5ZmMzYTFhMzBmNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5MzFkZTNiNzNiODkzYTE3YjA2MDJlZjcwZjY1NzZiY2QyZWUzYzA1NTU3YjJmZjNhZWE4ZDBmOWE1MzQwZjkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ac384c245f19476f83ea705913cae85b",
+      "statement": "The source README states Python 3.x, Tkinter, and psycopg2 as requirements; the active login module imports psycopg2, but its UI startup and login callback do not establish a PostgreSQL connection.",
+      "evidence": [
+        {
+          "resource": "repo://src/README.md#L12-L18",
+          "version": "repo-lines-v1:sha256:c84fdfd5e839c28ec9b91269abc59b7ef7f593c99440b9c5d1fc70d1cda38b86:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDg0MTZmMTg2M2NlNTI5MGYwZjQxZmE1MzNmYjllMTBmZWY1ZDQwNWMxMzAwYzAzZTI3NmEwYTg5NDM4MmI2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGEzMjhhZTQ1NTJjZTNjMTNkMDRhM2EyMDg1NzU4MjU1NTI1ZmUyNzg0N2I5Mzk4ODAwM2RjMTRmYmFiNjUyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDcxMTFmODY0NThlZTdiZGE0YzhmMDQ1NjNkYjc1MmNjOTg0ZWJmZGVkZDkxMWFmZDFkOTg2ZTIyNzA2ZmUwYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L4-L7",
+          "version": "repo-lines-v1:sha256:7ac93481d2175f0d8cb5d5b1aded2ddaf4ce09f0a9defffb6acd6eb20ea69f64:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZkZjFhMjYxMjFjMGNhMWY1YzZhMGRhMGYyNjU1MTM1OTkyY2VlNWQ5MzQzMTM1ZjNmNWY1MTQ3N2E0NDFlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmY5YjA1ZGRmYjMwNTBhODNkNmQwNGUyMjVlNjMwY2E3MmQ0M2RkOTQ5Zjk4NmZkOTkxMjM0ZWQ4MmI2MDVjNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L1-L3",
+          "version": "repo-lines-v1:sha256:b4dede6866472e12a70421473d5d0589a471c677ee07f51230de941f3bcbdcaf:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ4MjdhOGE4MWYzZDc2MmNhYjI4MjVlMDc3MTJmY2ViMGUxODAwMTEzOGYyZjEyMTU0ZWU4YjQwNDNlYmFiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWIzZDYxNjVmMmYyZGZjYzU3MTZjOTY2ZmQ2MTVjYWNmNGY4N2NmZDFhMzVjM2JlMThlNDc1YWI3YjhiNjQ3ZiJ9"
+        },
+        {
+          "resource": "repo://src/login.py#L26-L35",
+          "version": "repo-lines-v1:sha256:2af4f63b9aa75f4e3cc4515669e11c07f9471bdce0ab85c13c01bb610ff68caf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3OTgxMWYzOGFjN2EzMzY5MjNkM2U0Y2I5ZDIwM2UxMmFiYTYwMmI3ZDUxOTk4ZTliZTBkYmE4YmY4ODcxZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViOWQ0YjkyZTNiMTdiZjdjNWY4YWFlM2MyODBkNmEwZjcyM2U2MGQwM2E0MzA0ODkxMTRjODMyOTMyNTgxZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2MWE3Yjc1NjI0MmQ5ODE0M2MxODgzM2M2MjdmYzJjNDhmMGEwMjkyMTY2YWE1ZTI2NGY3NzUzY2I0YWI4YjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_552f7e79fb614da5ae308582f5b46b90",
+      "statement": "The active login form's Submit action reads the entered email and password and prints both; it does not implement authentication or database interaction.",
+      "evidence": [
+        {
+          "resource": "repo://src/login.py#L16-L30",
+          "version": "repo-lines-v1:sha256:2273ea0d07e931d2294b206a9b62e8b37a0c249e40bc689d65610e84eb877f34:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjNDQ5MDE5MWQ1OGQ3Yzg0YmEyMmI4NWJlY2E3YzQ0NTQ1ZjVjZDE2OTJmZDgzNGIxMmNhNjg0MmQzMTA4OTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxYTczM2FhOTUwMDgzMTE2MDllZTE5ODY1OTEyMGFmZmRmYjQxZjY1OTIwZDQyNDIzOWM2NTVjOGIxOGJhMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxMTA4MTEyZGE1MDYwMDljZTI3YTM2MjdjNjFhZjdlMDg2ZjQ3NTAxODUzMTFlOGJjMmE2ZDY0NDE4NTQ0MTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0MjRjYTgxMjNmYmI1YmVkN2ZiMzEzYTNhY2NhZDI3YmYxNmUxYjRhNTBjMDBlZjIwMmJiMzg3NzE2YjUzODQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_911e227dd8464096a2adbc53aad54fd3",
+      "statement": "The root-level prototype script `doc1.py` has its own Tk root and imports psycopg2, while the active app entrypoint is `src/app.py`; the prototype is not invoked by the active app startup path.",
+      "evidence": [
+        {
+          "resource": "repo://doc1.py#L1-L5",
+          "version": "repo-lines-v1:sha256:6daf3378569ead882503b967205081f17f5c8bf7474682f49537bbdebae42ae2:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmM5YzJhYWFhNmE2ODY5MDAyMzdlZWRiODhkYjIzNTBiZDBlZGM0NDYyZjdiY2E5NjdjYmM0ZjJjNzMxMGJkZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGFhYjk1ZGRiMmZlNzI4YWI1ZmZkMDEwZDc2OTBlOWE1MDVkNWZmMTg1ODdlMThmYTg0ZTBhZTc0ZTU4ZWM0NiJ9"
+        },
+        {
+          "resource": "repo://src/app.py#L1-L7",
+          "version": "repo-lines-v1:sha256:b30489038d463741a7b7786783c6d44f9ae2fed2f65bf12f5f8089450cddf93d:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdlOTIzZjk5OGYyMTNhNzI3M2UxOTAwODQ5MmQwMjAwZGIzY2EwODBjNDQ3YzlmZTFhY2U5MWZmNWFkNWNkYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZDRiOTJlM2IxN2JmN2M1ZjhhYWUzYzI4MGQ2YTBmNzIzZTYwZDAzYTQzMDQ4OTExNGM4MzI5MzI1ODFmNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-03T08:50:35.037Z"
+  }
+}
